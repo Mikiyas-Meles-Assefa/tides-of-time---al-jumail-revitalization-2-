@@ -204,18 +204,33 @@ const PROBLEM_CHALLENGES = [
 const STAKEHOLDERS = [
   {
     group: "Tribal Descendants",
-    role: "Holders of oral history",
-    detail: "Al-Kubaisa and Al-Muhannadi families become primary users of the site, shaping interpretation through ancestral memory."
+    role: "Memory and cultural accuracy",
+    detail: "Al-Kubaisa and Al-Muhannadi families guide oral-history collection, review interpretive content, and help keep the project rooted in lived ancestral memory."
   },
   {
-    group: "Institutional",
-    role: "Conservation and stewardship",
-    detail: "Qatar Museums supports preventive conservation while the Ministry of Environment guides ecological protection."
+    group: "Public Institutions",
+    role: "Conservation and governance",
+    detail: "Qatar Museums sets conservation standards, the Ministry of Culture supports heritage programming, and environmental authorities protect the coastal setting."
   },
   {
-    group: "Private Sector",
-    role: "Production and storytelling",
-    detail: "Agrico anchors food security and sustainable growing, while Ducasse translates Qatari heritage into gastronomic storytelling."
+    group: "Education and Research",
+    role: "Learning and documentation",
+    detail: "Schools, universities, and researchers use the site as a field classroom for archaeology, ecology, architecture, oral history, and sustainable design."
+  },
+  {
+    group: "Private Partners",
+    role: "Operations and enterprise",
+    detail: "Agriculture, food, craft, and hospitality partners operate selected programs while following conservation limits and community-approved storytelling."
+  },
+  {
+    group: "Visitors and Families",
+    role: "Public engagement",
+    detail: "Visitors become active learners through pearling, trade, farming, majlis, and memory activities rather than passive observers of abandoned ruins."
+  },
+  {
+    group: "Site Staff",
+    role: "Daily management",
+    detail: "Guides, conservators, gardeners, educators, and service teams manage visitor flow, maintenance, safety, interpretation, and long-term monitoring."
   }
 ];
 
@@ -228,7 +243,7 @@ const NATIONAL_ALIGNMENT = [
   {
     strategy: "QNV 2030",
     pillar: "Environmental",
-    application: "Harmonizing urban expansion with enviroment."
+    application: "Harmonizing urban expansion with environmental stewardship."
   },
   {
     strategy: "NDS3",
@@ -239,6 +254,106 @@ const NATIONAL_ALIGNMENT = [
     strategy: "NDS3",
     pillar: "Sustainability",
     application: "Conserving resources and building climate resilience."
+  }
+];
+
+const INTEGRATED_STRATEGY = [
+  {
+    field: "Science",
+    focus: "Conservation and ecology",
+    detail: "Because the village sits in a harsh coastal environment, each intervention begins with material assessment: salt, humidity, wind, erosion, fragile masonry, and water demand are treated as design constraints."
+  },
+  {
+    field: "Design",
+    focus: "Adaptive reuse and experience",
+    detail: "Design turns selected houses into active learning spaces while keeping ruin character visible. The route connects pearling, trade, family life, agriculture, hospitality, and memory as one story."
+  },
+  {
+    field: "Policy",
+    focus: "Governance and national alignment",
+    detail: "Policy gives the project a delivery structure: heritage authorities, environmental oversight, cultural programming, and QNV 2030 priorities define what can be restored, used, and maintained."
+  }
+];
+
+const EVIDENCE_BASIS = [
+  {
+    title: "Heritage Value",
+    detail: "Qatar Museums identifies Al Jumail as a nineteenth-century traditional village with an intact mosque minaret and ancestral importance for local families."
+  },
+  {
+    title: "Historic Transition",
+    detail: "Public heritage descriptions place Al Jumail within the wider shift from coastal pearling and fishing settlements toward modern urban growth after the oil and gas economy."
+  },
+  {
+    title: "Environmental Exposure",
+    detail: "The site's coastal location makes wind, humidity, salt, heat, and visitor pressure practical conservation concerns, not only background context."
+  },
+  {
+    title: "Policy Relevance",
+    detail: "QNV 2030 frames national development through social, human, economic, and environmental pillars, including the balance between modernization, tradition, and environmental protection."
+  }
+];
+
+const IMPLEMENTATION_PHASES = [
+  {
+    phase: "01",
+    title: "Document and Listen",
+    detail: "Map the existing ruins, record material conditions, identify climate risks, and collect oral histories from descendant families."
+  },
+  {
+    phase: "02",
+    title: "Stabilize and Protect",
+    detail: "Secure fragile walls, define no-touch zones, protect coastal ecology, and prepare conservation guidelines before visitor programming begins."
+  },
+  {
+    phase: "03",
+    title: "Adapt and Program",
+    detail: "Fit selected structures with low-impact exhibits, shaded routes, interpretation, workshops, and service access without erasing the historic fabric."
+  },
+  {
+    phase: "04",
+    title: "Operate and Monitor",
+    detail: "Launch guided visits, school programs, food and craft partnerships, maintenance schedules, visitor caps, and ongoing environmental monitoring."
+  }
+];
+
+const IMPACT_LIMITATIONS = [
+  {
+    title: "Anticipated Impacts",
+    points: [
+      "Preserves a visible link to Qatar's pre-oil maritime identity.",
+      "Creates hands-on education through pearling, trade, agriculture, family life, and oral memory.",
+      "Supports sustainable cultural tourism while giving local families and institutions active roles.",
+      "Builds environmental awareness through coastal conservation, water use, and climate resilience."
+    ]
+  },
+  {
+    title: "Limitations and Risks",
+    points: [
+      "Fragile ruins require expert conservation and continuous maintenance.",
+      "Too many visitors could damage the site or weaken the feeling of authenticity.",
+      "Commercial programs must not overpower cultural memory or community authority.",
+      "Coastal climate exposure means the project needs monitoring, repair budgets, and adaptive management."
+    ]
+  }
+];
+
+const MULTIMEDIA_METHOD = [
+  {
+    mode: "Before / After Slider",
+    purpose: "Shows the design argument directly by comparing abandonment with the proposed revitalized site."
+  },
+  {
+    mode: "Interactive Map",
+    purpose: "Turns the proposal into a navigable system, allowing each house and landscape zone to explain its program."
+  },
+  {
+    mode: "Image Carousels",
+    purpose: "Support the solution with visual evidence of activities, atmospheres, and spatial uses."
+  },
+  {
+    mode: "Suggested Audio Layer",
+    purpose: "Sea, wind, footsteps, market activity, and oral-history narration could make the multimedia output equivalent to a guided heritage experience."
   }
 ];
 
@@ -958,13 +1073,13 @@ export default function App() {
               A Living <br /> Experience
             </motion.h2>
             <motion.p variants={fadeIn} className="text-xl md:text-2xl leading-relaxed opacity-80 font-serif text-brand-accent italic">
-              This project transforms the site from a silent relic into a vibrant, participatory ecosystem.
+              The intervention transforms Al Jumail into a living heritage museum where restored village structures host interactive programs about pearling, trade, family life, agriculture, hospitality, and collective memory.
             </motion.p>
             <div className="space-y-6">
                {[
-                 "Interactive digital memory layers",
-                 "Active heritage engagement",
-                 "Community storytelling platforms"
+                 "Stabilized ruins and adaptive reuse",
+                 "Hands-on cultural learning houses",
+                 "Community-led memory and policy alignment"
                ].map((item, i) => (
                  <motion.div key={i} variants={fadeIn} className="flex items-center gap-6 group">
                     <div className="w-12 h-12 rounded-full border border-brand-accent/10 flex items-center justify-center text-xs font-bold group-hover:bg-brand-accent group-hover:text-white transition-all duration-500">0{i+1}</div>
@@ -1183,7 +1298,217 @@ export default function App() {
         </div>
       </section>
 
-      {/* 9. STAKEHOLDERS AND NATIONAL ALIGNMENT */}
+      {/* 9. FROM VISION TO IMPLEMENTATION */}
+      <section id="implementation" className="relative bg-[#F2EDE2] text-brand-accent py-[180px] overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(216,182,106,0.18),transparent_34%),radial-gradient(circle_at_85%_75%,rgba(58,46,37,0.10),transparent_30%)] pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-6 relative z-10 space-y-24">
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "-15%" }}
+            className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-16 items-start"
+          >
+            <motion.div variants={fadeIn} className="space-y-6">
+              <span className="text-xs uppercase tracking-[0.6em] text-brand-accent/40 font-bold block">Proposal Logic</span>
+              <h2 className="text-5xl md:text-7xl font-serif italic leading-[1.05] text-brand-accent">
+                From vision to implementation.
+              </h2>
+            </motion.div>
+            <motion.div variants={fadeIn} className="space-y-6">
+              <p className="text-2xl md:text-3xl font-serif italic leading-tight text-brand-accent/90">
+                The project is not only a visual restoration. It is a coordinated system where science protects the site, design makes heritage experiential, and policy makes the work feasible.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {[
+                  { label: "Problem", text: "Decay, cultural erasure, and modernization pressure are weakening Al Jumail's physical and social memory." },
+                  { label: "Context", text: "The village represents Qatar's 19th-century pearling and fishing life before the oil economy transformed settlement patterns." },
+                  { label: "Significance", text: "Revitalization protects a national memory site while creating a public place for learning, participation, and stewardship." }
+                ].map((item) => (
+                  <div key={item.label} className="rounded-2xl bg-white/70 border border-brand-accent/10 p-6 shadow-sm">
+                    <p className="text-[10px] uppercase tracking-[0.35em] text-brand-accent/40 font-bold mb-4">{item.label}</p>
+                    <p className="text-sm leading-relaxed text-brand-accent/70">{item.text}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "-15%" }}
+            className="space-y-10"
+          >
+            <motion.div variants={fadeIn} className="max-w-3xl">
+              <span className="text-xs uppercase tracking-[0.6em] text-brand-accent/40 font-bold block mb-6">Evidence Base</span>
+              <h3 className="text-4xl md:text-5xl font-serif italic leading-tight">
+                The proposal responds to documented heritage value, visible decay, and national planning priorities.
+              </h3>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+              {EVIDENCE_BASIS.map((item) => (
+                <motion.div
+                  key={item.title}
+                  {...fadeIn}
+                  className="rounded-2xl border border-brand-accent/15 bg-white p-7 min-h-[230px] flex flex-col shadow-[0_20px_60px_-35px_rgba(58,46,37,0.35)]"
+                >
+                  <h4 className="text-xl font-serif italic text-brand-accent mb-5">{item.title}</h4>
+                  <p className="text-sm leading-relaxed text-brand-accent/75 mt-auto">{item.detail}</p>
+                </motion.div>
+              ))}
+            </div>
+            <motion.p variants={fadeIn} className="text-xs uppercase tracking-[0.25em] leading-relaxed text-brand-accent/40 max-w-4xl">
+              Source basis: Qatar Museums heritage-site descriptions, Qatar National Vision 2030, and publicly available descriptions of Al Jumail as a coastal pearling and fishing settlement.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "-15%" }}
+            className="space-y-10"
+          >
+            <motion.div variants={fadeIn} className="max-w-3xl">
+              <span className="text-xs uppercase tracking-[0.6em] text-brand-accent/40 font-bold block mb-6">Science Design Policy Integration</span>
+              <h3 className="text-4xl md:text-5xl font-serif italic leading-tight">
+                Each discipline answers a different project risk.
+              </h3>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {INTEGRATED_STRATEGY.map((item) => (
+                <motion.div
+                  key={item.field}
+                  {...fadeIn}
+                  className="rounded-[28px] bg-[#121110] text-[#F2EDE2] p-8 md:p-10 min-h-[330px] flex flex-col shadow-[0_30px_80px_-45px_rgba(0,0,0,0.75)]"
+                >
+                  <p className="text-[10px] uppercase tracking-[0.35em] text-[#D8B66A]/60 font-bold mb-6">{item.field}</p>
+                  <h4 className="text-3xl font-serif italic text-[#F0D28A] mb-6">{item.focus}</h4>
+                  <p className="text-sm md:text-base leading-relaxed text-white/75 mt-auto">{item.detail}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "-15%" }}
+            className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-16 items-start"
+          >
+            <motion.div variants={fadeIn} className="space-y-6">
+              <span className="text-xs uppercase tracking-[0.6em] text-brand-accent/40 font-bold block">Multimedia Method</span>
+              <h3 className="text-4xl md:text-5xl font-serif italic leading-tight">
+                The media is part of the argument.
+              </h3>
+              <p className="text-base md:text-lg leading-relaxed text-brand-accent/65">
+                The website uses visual comparison, spatial interaction, and proposed sound to communicate what a written report would explain in text: the site condition, the intervention, and the visitor experience.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {MULTIMEDIA_METHOD.map((item) => (
+                <motion.div
+                  key={item.mode}
+                  {...fadeIn}
+                  className="rounded-2xl border border-brand-accent/15 bg-white p-7 shadow-[0_20px_60px_-35px_rgba(58,46,37,0.35)]"
+                >
+                  <p className="text-[10px] uppercase tracking-[0.35em] text-brand-accent/40 font-bold mb-4">{item.mode}</p>
+                  <p className="text-sm leading-relaxed text-brand-accent/75">{item.purpose}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "-15%" }}
+            className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-16 items-start"
+          >
+            <motion.div variants={fadeIn} className="space-y-6">
+              <span className="text-xs uppercase tracking-[0.6em] text-brand-accent/40 font-bold block">Feasibility and Pathway</span>
+              <h3 className="text-4xl md:text-5xl font-serif italic leading-tight">
+                A phased route makes the proposal realistic.
+              </h3>
+              <p className="text-base md:text-lg leading-relaxed text-brand-accent/65">
+                Feasibility depends on starting with documentation and conservation before adding visitor activity. Programs are introduced only where structures, ecology, access, and staffing can support them.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {IMPLEMENTATION_PHASES.map((item) => (
+                <motion.div
+                  key={item.phase}
+                  {...fadeIn}
+                  className="rounded-2xl border border-brand-accent/15 bg-white p-7 min-h-[220px] shadow-[0_20px_60px_-35px_rgba(58,46,37,0.35)]"
+                >
+                  <p className="text-4xl font-serif italic text-brand-accent/25 mb-4">{item.phase}</p>
+                  <h4 className="text-xl font-bold tracking-tight text-brand-accent mb-4">{item.title}</h4>
+                  <p className="text-sm leading-relaxed text-brand-accent/75">{item.detail}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "-15%" }}
+            className="space-y-10"
+          >
+            <motion.div variants={fadeIn} className="max-w-3xl">
+              <span className="text-xs uppercase tracking-[0.6em] text-brand-accent/40 font-bold block mb-6">Impact and Limits</span>
+              <h3 className="text-4xl md:text-5xl font-serif italic leading-tight">
+                The project is valuable, but it must be carefully managed.
+              </h3>
+            </motion.div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {IMPACT_LIMITATIONS.map((group) => (
+                <motion.div
+                  key={group.title}
+                  {...fadeIn}
+                  className="rounded-[28px] border border-brand-accent/15 bg-white p-8 md:p-10 shadow-[0_20px_60px_-35px_rgba(58,46,37,0.35)]"
+                >
+                  <h4 className="text-3xl font-serif italic text-brand-accent mb-8">{group.title}</h4>
+                  <ul className="space-y-5">
+                    {group.points.map((point) => (
+                      <li key={point} className="flex gap-4 text-sm md:text-base leading-relaxed text-brand-accent/75">
+                        <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-accent/30" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "-15%" }}
+            className="rounded-[36px] bg-[#121110] text-[#F2EDE2] p-10 md:p-14 lg:p-16 overflow-hidden relative"
+          >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(216,182,106,0.18),transparent_30%)] pointer-events-none" />
+            <motion.div variants={fadeIn} className="relative z-10 max-w-4xl space-y-8">
+              <span className="text-xs uppercase tracking-[0.6em] text-[#D8B66A]/60 font-bold block">Decision Statement</span>
+              <h3 className="text-4xl md:text-6xl font-serif italic leading-tight text-[#F0D28A]">
+                The goal is not to rebuild the past, but to make it legible, protected, and useful for the future.
+              </h3>
+              <p className="text-lg md:text-xl leading-relaxed text-white/65">
+                A successful Al Jumail revitalization would begin with conservation, earn legitimacy through community memory, operate through clear institutional roles, and use design to translate heritage into public learning. Its value comes from balancing access with restraint: visitors can participate in the story, but the site remains protected as a fragile cultural landscape.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 10. STAKEHOLDERS AND NATIONAL ALIGNMENT */}
       <section id="alignment" className="bg-[#121110] text-[#F2EDE2] py-[180px] relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.04] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10 space-y-28">
@@ -1201,12 +1526,12 @@ export default function App() {
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
               {STAKEHOLDERS.map((stakeholder) => (
                 <motion.div
                   key={stakeholder.group}
                   variants={fadeIn}
-                  className="rounded-[28px] border border-white/10 bg-white/[0.04] p-8 md:p-10 min-h-[280px] flex flex-col"
+                  className="rounded-[28px] border border-white/10 bg-white/[0.04] p-8 md:p-10 min-h-[300px] flex flex-col"
                 >
                   <p className="text-[10px] uppercase tracking-[0.35em] text-[#D8B66A]/55 font-bold mb-6">{stakeholder.role}</p>
                   <h3 className="text-3xl font-serif italic text-[#F0D28A] mb-6">{stakeholder.group}</h3>
