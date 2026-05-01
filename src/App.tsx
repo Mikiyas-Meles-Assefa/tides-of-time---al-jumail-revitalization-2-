@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect, useRef, Fragment } from 'react';
 import type { MotionValue } from 'motion/react';
 import { motion, AnimatePresence, useScroll, useTransform, useSpring, useMotionValueEvent } from 'motion/react';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, MousePointerClick } from 'lucide-react';
 
 const mapNodes = [
   { 
@@ -485,6 +485,7 @@ function ProblemBullet({
 
 export default function App() {
   const [selectedNode, setSelectedNode] = useState<number | null>(null);
+  const [hasClickedMap, setHasClickedMap] = useState(false);
   const [modalImageIndex, setModalImageIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
@@ -1250,13 +1251,13 @@ export default function App() {
       </section>
 
       {/* 7. INTERACTIVE MAP SECTION */}
-      <section id="map" className="relative w-full bg-brand-secondary overflow-hidden flex flex-col py-24">
-        <div className="relative z-10 p-12 text-center pointer-events-none">
+      <section id="map" className="relative w-full bg-brand-secondary overflow-hidden flex flex-col pt-24 pb-12">
+        <div className="relative z-10 px-6 pb-6 text-center pointer-events-none">
             <h3 id="site-interactive-title" className="text-3xl md:text-4xl font-serif text-brand-accent tracking-widest uppercase">The Interactive Story Map</h3>
-            <p className="text-sm md:text-base opacity-70 mt-4 tracking-[0.2em] text-brand-accent font-bold mb-8">Click on the houses in the map below to explore their details and programs</p>
+            <p className="text-sm md:text-base opacity-70 mt-4 tracking-[0.2em] text-brand-accent font-bold">Click on the houses in the map below to explore their details and programs</p>
         </div>
 
-        <div className="relative z-10 w-full flex-grow flex items-center justify-center p-4 md:p-12">
+        <div className="relative z-10 w-full flex-grow flex items-center justify-center p-4 md:px-12 md:pb-12">
           <div className="relative w-full max-w-[1600px] aspect-[1559/1009] rounded-2xl shadow-2xl overflow-hidden group/map">
             <img 
               src="/images/aerial_revitalized.png" 
@@ -1280,6 +1281,7 @@ export default function App() {
                     className="cursor-pointer transition-all duration-500 fill-transparent hover:fill-white/20 stroke-transparent hover:stroke-white/50 stroke-[0.2]"
                     onClick={() => {
                       setSelectedNode(node.id);
+                      setHasClickedMap(true);
                       setModalImageIndex(0);
                     }}
                     onMouseEnter={() => setIsHovering(true)}
@@ -1290,6 +1292,27 @@ export default function App() {
             </svg>
             
             <div className="absolute inset-0 bg-black/0 group-hover/map:bg-black/10 transition-colors duration-700 pointer-events-none" />
+
+            {/* Click Here Indicator */}
+            {!hasClickedMap && (
+              <div 
+                className="absolute z-30 pointer-events-none animate-bounce" 
+                style={{ left: '28.5%', top: '23%' }}
+              >
+                <div className="relative">
+                  {/* Text pill positioned absolutely above the exact map coordinate so it scales upward */}
+                  <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 bg-brand-accent text-white text-[10px] md:text-xs lg:text-sm font-bold px-4 py-2 md:px-5 md:py-2.5 rounded-full uppercase tracking-[0.2em] shadow-[0_10px_30px_rgba(0,0,0,0.5)] whitespace-nowrap border border-white/20">
+                    Click to explore Pearling House
+                  </div>
+                  {/* Icon positioned so its pointing tip remains anchored exactly at the map coordinate */}
+                  <MousePointerClick 
+                    className="absolute top-0 w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 text-white drop-shadow-[0_0_12px_rgba(0,0,0,0.6)]" 
+                    strokeWidth={2.5} 
+                    style={{ transform: 'translateX(-35%)' }}
+                  />
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
@@ -1504,15 +1527,18 @@ export default function App() {
                 The proposal is grounded in:
               </h3>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-              {EVIDENCE_BASIS.map((item) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+              {EVIDENCE_BASIS.map((item, index) => (
                 <motion.div
                   key={item.title}
                   {...fadeIn}
-                  className="rounded-2xl border border-brand-accent/15 bg-white p-7 min-h-[230px] flex flex-col shadow-[0_20px_60px_-35px_rgba(58,46,37,0.35)]"
+                  className="rounded-2xl border border-brand-accent/15 bg-white p-7 md:p-8 min-h-[230px] flex flex-col shadow-[0_20px_60px_-35px_rgba(58,46,37,0.35)] relative overflow-hidden group hover:-translate-y-1 hover:shadow-[0_30px_80px_-20px_rgba(58,46,37,0.25)] transition-all duration-500"
                 >
-                  <h4 className="text-xl font-serif italic text-brand-accent mb-5">{item.title}</h4>
-                  <p className="text-sm leading-relaxed text-brand-accent/75">{item.detail}</p>
+                  <div className="absolute top-0 right-0 w-16 h-16 bg-[#F2EDE2] rounded-bl-[24px] flex items-center justify-center -mr-2 -mt-2 group-hover:bg-brand-accent transition-colors duration-500 border-l border-b border-brand-accent/10">
+                    <span className="text-brand-accent/40 group-hover:text-[#F0D28A] font-serif italic text-xl pr-2 pt-2">0{index + 1}</span>
+                  </div>
+                  <h4 className="text-xl font-serif italic text-brand-accent mb-6 pr-8 relative z-10">{item.title}</h4>
+                  <p className="text-sm leading-relaxed text-brand-accent/75 relative z-10">{item.detail}</p>
                 </motion.div>
               ))}
             </div>
@@ -1534,21 +1560,24 @@ export default function App() {
                 Each discipline answers a different project risk.
               </h3>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {INTEGRATED_STRATEGY.map((item) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-0 rounded-[36px] overflow-hidden shadow-[0_40px_100px_-30px_rgba(0,0,0,0.8)] border border-white/10">
+              {INTEGRATED_STRATEGY.map((item, index) => (
                 <motion.div
                   key={item.field}
                   {...fadeIn}
-                  className="rounded-[28px] bg-[#121110] text-[#F2EDE2] p-8 md:p-10 min-h-[330px] flex flex-col shadow-[0_30px_80px_-45px_rgba(0,0,0,0.75)]"
+                  className={`bg-[#121110] hover:bg-[#181716] transition-colors duration-500 text-[#F2EDE2] p-8 md:p-10 lg:p-12 min-h-[330px] flex flex-col relative group ${
+                    index !== 0 ? 'border-t md:border-t-0 md:border-l border-white/10' : ''
+                  }`}
                 >
                   <p className="text-[10px] uppercase tracking-[0.35em] text-[#D8B66A]/60 font-bold mb-6">{item.field}</p>
-                  <h4 className="text-3xl font-serif italic text-[#F0D28A] mb-6">{item.focus}</h4>
-                  {item.detail && <p className="text-sm md:text-base leading-relaxed text-white/75 mb-6">{item.detail}</p>}
+                  <h4 className="text-3xl font-serif italic text-[#F0D28A] mb-8">{item.focus}</h4>
+                  {item.detail && <p className="text-sm md:text-base leading-relaxed text-white/75 mb-8">{item.detail}</p>}
                   <div>
-                    <ul className="space-y-2">
+                    <ul className="space-y-4">
                       {item.guides.map((guide, i) => (
-                        <li key={i} className="text-sm text-white/60 flex gap-3">
-                          <span className="text-[#D8B66A]/50">-</span> {guide}
+                        <li key={i} className="text-sm text-white/60 flex gap-4">
+                          <span className="mt-2 h-1 w-1 flex-none rounded-full bg-[#D8B66A]/50 group-hover:bg-[#D8B66A] transition-colors" />
+                          <span>{guide}</span>
                         </li>
                       ))}
                     </ul>
@@ -1749,20 +1778,23 @@ export default function App() {
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {NATIONAL_ALIGNMENT.map((item) => (
+            <div className="flex flex-col border-t border-white/10 mt-8">
+              {NATIONAL_ALIGNMENT.map((item, index) => (
                 <motion.div
                   key={`${item.strategy}-${item.pillar}`}
                   variants={fadeIn}
-                  className="group rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8 grid grid-cols-1 sm:grid-cols-[120px_1fr] gap-6 hover:bg-white/[0.07] transition-colors duration-500"
+                  className="group grid grid-cols-1 md:grid-cols-[1fr_1fr_2fr] gap-6 md:gap-8 items-start py-8 md:py-10 border-b border-white/10 hover:bg-white/[0.02] transition-colors duration-500 px-6 -mx-6 sm:mx-0 sm:px-8 rounded-xl"
                 >
-                  <div>
+                  <div className="flex flex-col justify-start">
                     <p className="text-[10px] uppercase tracking-[0.35em] text-white/30 font-bold mb-3">Strategy</p>
-                    <p className="text-xl font-serif italic text-[#F0D28A]">{item.strategy}</p>
+                    <p className="text-2xl font-serif italic text-[#F0D28A]">{item.strategy}</p>
                   </div>
-                  <div>
-                    <p className="text-[10px] uppercase tracking-[0.35em] text-white/30 font-bold mb-3">{item.pillar}</p>
-                    <p className="text-lg leading-relaxed text-white/65 group-hover:text-white/80 transition-colors">{item.application}</p>
+                  <div className="flex flex-col justify-start">
+                    <p className="text-[10px] uppercase tracking-[0.35em] text-white/30 font-bold mb-3">Pillar</p>
+                    <p className="text-xl font-serif italic text-[#D8B66A]/80">{item.pillar}</p>
+                  </div>
+                  <div className="flex flex-col justify-start md:pt-7">
+                    <p className="text-lg md:text-xl leading-relaxed text-white/65 group-hover:text-white transition-colors">{item.application}</p>
                   </div>
                 </motion.div>
               ))}
