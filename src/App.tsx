@@ -8,8 +8,13 @@ const mapNodes = [
     id: 1, 
     title: "Pearling House", 
     polygon: "25.96,12.42 22.64,12.22 22.77,8.26 33.57,8.76 33.13,12.91 28.71,12.61 28.84,19.73 32.74,21.01 35.56,24.96 33.25,28.92 35.05,35.64 26.03,38.80 22.32,31.49 24.49,23.58 25.84,21.01 26.92,20.02 25.90,12.61",
-    description: "A hands-on pearling experience with oyster opening, diving weights, pearl exhibits, and heritage objects.", 
-    activities: ["Oyster opening", "Pearl journey exhibit", "Diving weight challenge", "Heritage shop"], 
+    description: "Focus: Maritime labor and pearling practices.", 
+    activities: [
+      "Oyster opening activity using real tools", 
+      "Handling diving weights and understanding diver equipment", 
+      "Exploring pearl sorting and grading through hands-on display", 
+      "Experiencing tools, ropes, and materials used in daily pearling work"
+    ], 
     caption: "Pearls, tools, and coastal craft",
     images: [
       { src: "/images/Pearling Images/seafront entrance viiew outside.png", caption: "Seafront entrance view from the outside" },
@@ -25,8 +30,13 @@ const mapNodes = [
     id: 2, 
     title: "Family Life House", 
     polygon: "35.43,31.54 43.04,35.19 45.92,29.07 43.61,25.31 40.80,24.13 40.86,14.84 46.30,14.35 46.30,11.08 35.05,11.18 34.66,15.14 39.84,15.14 39.33,23.73 35.75,25.81 34.92,30.45 35.17,31.04",
-    description: "A domestic heritage space showing family interiors, spatial life, and traditional weaving.", 
-    activities: ["House entrance", "Family interior", "Weaving activity"], 
+    description: "Focus: Domestic space and daily routines.", 
+    activities: [
+      "Participating in textile weaving (sadu)", 
+      "Exploring traditional interior layout and family spaces", 
+      "Experiencing everyday household activities and tools",
+      "Learning about food preparation and storage practices"
+    ], 
     caption: "Everyday family life and craft",
     images: [
       { src: "/images/Family Life House/family life entrance.png", caption: "Family Life House entrance" },
@@ -38,8 +48,13 @@ const mapNodes = [
     id: 3, 
     title: "Trade House", 
     polygon: "49.95,20.27 47.20,19.48 47.00,15.93 55.77,15.53 56.02,19.68 52.44,20.67 52.25,26.89 58.83,29.46 57.75,33.32 55.32,40.33 46.43,35.00 50.52,28.08 49.69,19.38",
-    description: "A trade-focused house with market displays, exchange objects, bartering, and historic currencies.", 
-    activities: ["Trade museum", "Exchange goods", "Bartering activity", "Historic currencies"], 
+    description: "Focus: Local exchange systems. This house reflects Al Jumail as a regional exchange point, not a large-scale international hub.", 
+    activities: [
+      "Interacting with goods such as fish, dates, and pearls", 
+      "Participating in a simple barter-based activity", 
+      "Exploring historic currencies and trade objects", 
+      "Understanding how local exchange supported village life"
+    ], 
     caption: "Commerce, exchange, and coastal trade",
     images: [
       { src: "/images/Trade House/trade house entrance.png", caption: "Trade House entrance" },
@@ -53,8 +68,13 @@ const mapNodes = [
     id: 4, 
     title: "Majlis House", 
     polygon: "66.00,26.70 62.29,26.40 62.35,22.74 71.94,22.55 71.75,26.20 67.72,26.80 67.53,36.58 70.86,39.94 66.89,49.62 63.44,51.40 56.15,46.76 59.15,40.43 62.29,36.28 65.49,35.98 65.42,26.30",
-    description: "A communal gathering house with majlis seating, coffee rituals, calligraphy, and an open courtyard.", 
-    activities: ["Majlis gathering", "Arabic coffee", "Calligraphy activity", "Open courtyard"], 
+    description: "Focus: Social gathering and hospitality.", 
+    activities: [
+      "Sitting in a traditional majlis setting", 
+      "Participating in Arabic coffee preparation and serving", 
+      "Listening to guided storytelling and oral history", 
+      "Experiencing social interaction and hospitality practices"
+    ], 
     caption: "Gathering, hospitality, and dialogue",
     images: [
       { src: "/images/Majlis House/majilis house entrance.png", caption: "Majlis House entrance" },
@@ -68,8 +88,13 @@ const mapNodes = [
     id: 5, 
     title: "Agriculture Experience House", 
     polygon: "77.44,34.60 72.65,34.31 72.20,27.98 83.97,28.48 84.54,34.21 79.87,35.39 79.49,43.79 83.46,45.67 77.06,59.30 69.07,52.68 74.50,41.32 76.23,43.00 77.12,34.31",
-    description: "A local agriculture house centered on products, dates, herbs, livestock care, and seed preservation.", 
-    activities: ["Local products", "Dates and herbs", "Livestock care", "Seed preservation"], 
+    description: "Focus: Resource-limited cultivation. Agriculture is presented as constrained and adaptive, reflecting local environmental conditions.", 
+    activities: [
+      "Learning how date palms are used in daily life", 
+      "Exploring small-scale planting adapted to harsh conditions", 
+      "Understanding water use and survival strategies", 
+      "Experiencing basic agricultural tools and techniques"
+    ], 
     caption: "Food, seeds, and rural life",
     images: [
       { src: "/images/Agriculture Experience House/agro local products.png", caption: "Local agricultural products" },
@@ -82,8 +107,13 @@ const mapNodes = [
     id: 6, 
     title: "Art & Memory House", 
     polygon: "89.91,54.66 83.71,51.20 86.33,43.00 90.30,43.49 90.30,40.13 85.18,39.84 85.69,36.48 98.16,36.68 98.29,40.04 92.73,40.43 92.28,44.48 97.84,46.85 96.44,56.34 89.98,54.17",
-    description: "A creative memory space with art displays, community walls, children's painting, and message sharing.", 
-    activities: ["Community art wall", "Art museum", "Kids painting", "Message wall"], 
+    description: "Focus: Reflection and memory.", 
+    activities: [
+      "Writing and placing personal messages on a memory wall", 
+      "Viewing archival material and historical references", 
+      "Participating in simple art or drawing activities", 
+      "Contributing to a shared record of visitor experiences"
+    ], 
     caption: "Art, memory, and community expression",
     images: [
       { src: "/images/Art & Memory House/art and memory entrance.png", caption: "Art & Memory House entrance" },
@@ -95,10 +125,14 @@ const mapNodes = [
   },
   { 
     id: 7, 
-    title: "Agricultural Garden & Greenhouse", 
+    title: "Garden & Greenhouse", 
     polygon: "29.67,47.84 39.59,39.54 46.88,46.95 37.92,57.23 28.91,47.84 31.34,49.92 13.43,49.13 13.43,55.65 27.31,55.25 27.31,51.79 32.10,51.89",
-    description: "A greenhouse and garden zone showing desert cultivation from above and traditional falaj irrigation.", 
-    activities: ["Greenhouse view", "Falaj irrigation"], 
+    description: "Focus: Contemporary sustainability interpretation. This zone introduces hydroponics as a contemporary response to the environmental limits of the site, without presenting it as a historical practice.", 
+    activities: [
+      "Demonstration planting", 
+      "Hydroponic cultivation systems adapted to arid, saline conditions",
+      "Water-efficient closed-loop irrigation"
+    ], 
     caption: "Greenhouse systems and water heritage",
     images: [
       { src: "/images/Agricultural Garden & Greenhouse/green house sth bird view.png", caption: "Bird's-eye view of the greenhouse" },
@@ -107,10 +141,13 @@ const mapNodes = [
   },
   { 
     id: 8, 
-    title: "Restaurant & Cafe", 
+    title: "Food Space", 
     polygon: "39.39,61.97 51.67,51.30 63.44,59.50 53.21,74.92 45.15,67.31 16.56,68.39 17.27,63.36 42.21,64.34 38.88,61.58",
-    description: "A food and hospitality destination with an entrance sequence, outdoor seating, and local dishes.", 
-    activities: ["Cafe entrance", "Outdoor dining", "Local dishes"], 
+    description: "Focus: Local cuisine.", 
+    activities: [
+      "Simple, locally inspired meals", 
+      "Outdoor seating integrated with the site"
+    ], 
     caption: "Dining through local flavor",
     images: [
       { src: "/images/Restaurant & Cafe/restaurant cafe entrance.png", caption: "Restaurant and cafe entrance" },
@@ -120,10 +157,13 @@ const mapNodes = [
   },
   { 
     id: 9, 
-    title: "Staff & Service Area", 
+    title: "Service Area", 
     polygon: "61.90,81.54 72.01,68.20 79.55,71.06 78.15,83.41 79.68,86.87 79.68,90.82 69.77,91.61 61.33,80.94",
-    description: "A support zone mapped for staff operations, services, and site management.", 
-    activities: ["Staff area map", "Service access", "Site operations"], 
+    description: "Focus: Operations.", 
+    activities: [
+      "Staff circulation", 
+      "Maintenance and logistics"
+    ], 
     caption: "Operations behind the visitor route",
     images: [
       { src: "/images/Staff & Service Area/staff area map normla map.png", caption: "Staff and service area map" }
@@ -196,40 +236,40 @@ function ProblemSpiralImage({
 }
 
 const PROBLEM_CHALLENGES = [
-  { title: "Quiet Decay", desc: "Al Jumail is slowly deteriorating as an abandoned 19th-century pearling village." },
-  { title: "Cultural Erasure", desc: "The site holds Qatar's pre-petroleum maritime identity, but its stories risk being forgotten." },
-  { title: "Modernization Pressure", desc: "Rapid modernization has left the village facing both structural deterioration and cultural amnesia." }
+  { title: "Structural Decay", desc: "Structural decay of coral-stone buildings due to salt, humidity, and erosion." },
+  { title: "Intangible Loss", desc: "Loss of intangible heritage, including oral history and daily practices." },
+  { title: "Limited Engagement", desc: "Limited public engagement with pre-oil coastal life." }
 ];
 
 const STAKEHOLDERS = [
   {
     group: "Tribal Descendants",
-    role: "Memory and cultural accuracy",
-    detail: "Al-Kubaisa and Al-Muhannadi families guide oral-history collection, review interpretive content, and help keep the project rooted in lived ancestral memory."
+    role: "Provide historical knowledge and cultural validation",
+    detail: "Al Jumail was historically inhabited by members of the Al-Kubaisa tribe, alongside families from the Al-Muhannadi confederation—particularly the Al Hassan branch—as well as Al-Bu Kawara and Al-Humaidat families."
   },
   {
     group: "Public Institutions",
-    role: "Conservation and governance",
-    detail: "Qatar Museums sets conservation standards, the Ministry of Culture supports heritage programming, and environmental authorities protect the coastal setting."
+    role: "Lead planning, approval, and implementation",
+    detail: "Qatar Museums: project owner for heritage sites; sets conservation standards, approves interventions, and oversees implementation. Ministry of Culture: supports programming, interpretation, and cultural alignment. Ministry of Environment and Climate Change: regulates environmental protection, land use, and sustainability measures. Relevant public works/municipal bodies: coordinate access, utilities, and site infrastructure within conservation limits."
   },
   {
-    group: "Education and Research",
-    role: "Learning and documentation",
+    group: "Researchers and Educators",
+    role: "Support documentation and learning programs",
     detail: "Schools, universities, and researchers use the site as a field classroom for archaeology, ecology, architecture, oral history, and sustainable design."
   },
   {
-    group: "Private Partners",
-    role: "Operations and enterprise",
+    group: "Private Operators",
+    role: "Manage food and activity programs within constraints",
     detail: "Agriculture, food, craft, and hospitality partners operate selected programs while following conservation limits and community-approved storytelling."
   },
   {
-    group: "Visitors and Families",
-    role: "Public engagement",
+    group: "Visitors",
+    role: "Engage with the site through participation",
     detail: "Visitors become active learners through pearling, trade, farming, majlis, and memory activities rather than passive observers of abandoned ruins."
   },
   {
     group: "Site Staff",
-    role: "Daily management",
+    role: "Maintain operations and preservation standards",
     detail: "Guides, conservators, gardeners, educators, and service teams manage visitor flow, maintenance, safety, interpretation, and long-term monitoring."
   }
 ];
@@ -261,32 +301,47 @@ const INTEGRATED_STRATEGY = [
   {
     field: "Science",
     focus: "Conservation and ecology",
-    detail: "Because the village sits in a harsh coastal environment, each intervention begins with material assessment: salt, humidity, wind, erosion, fragile masonry, and water demand are treated as design constraints."
+    detail: "",
+    guides: [
+      "Material decay (salt crystallization, humidity)",
+      "Climate exposure",
+      "Water scarcity, addressed through contemporary methods such as hydroponic systems that reduce water use and operate in saline environments"
+    ]
   },
   {
     field: "Design",
     focus: "Adaptive reuse and experience",
-    detail: "Design turns selected houses into active learning spaces while keeping ruin character visible. The route connects pearling, trade, family life, agriculture, hospitality, and memory as one story."
+    detail: "",
+    guides: [
+      "Adaptive reuse of existing structures",
+      "Minimal intervention strategies",
+      "Controlled visitor movement"
+    ]
   },
   {
     field: "Policy",
     focus: "Governance and national alignment",
-    detail: "Policy gives the project a delivery structure: heritage authorities, environmental oversight, cultural programming, and QNV 2030 priorities define what can be restored, used, and maintained."
+    detail: "",
+    guides: [
+      "Alignment with Qatar National Vision 2030",
+      "Heritage conservation guidelines",
+      "Environmental protection requirements"
+    ]
   }
 ];
 
 const EVIDENCE_BASIS = [
   {
     title: "Heritage Value",
-    detail: "Qatar Museums identifies Al Jumail as a nineteenth-century traditional village with an intact mosque minaret and ancestral importance for local families."
+    detail: "Documented classification of Al Jumail as a historic coastal village, with known use of coral stone and traditional construction methods."
   },
   {
     title: "Historic Transition",
-    detail: "Public heritage descriptions place Al Jumail within the wider shift from coastal pearling and fishing settlements toward modern urban growth after the oil and gas economy."
+    detail: "Recorded shift from pearling economy to oil-based urbanization."
   },
   {
     title: "Environmental Exposure",
-    detail: "The site's coastal location makes wind, humidity, salt, heat, and visitor pressure practical conservation concerns, not only background context."
+    detail: "Environmental conditions of northern Qatar, including wind, humidity, salt, and heat."
   },
   {
     title: "Policy Relevance",
@@ -297,43 +352,65 @@ const EVIDENCE_BASIS = [
 const IMPLEMENTATION_PHASES = [
   {
     phase: "01",
-    title: "Document and Listen",
-    detail: "Map the existing ruins, record material conditions, identify climate risks, and collect oral histories from descendant families."
+    title: "Documentation",
+    points: [
+      "Conduct detailed site surveys and structural assessments of all buildings",
+      "Map fragile zones and areas suitable for intervention",
+      "Collect oral histories from tribal descendants to ensure cultural accuracy",
+      "Coordinate with Qatar Museums and researchers to establish conservation guidelines"
+    ]
   },
   {
     phase: "02",
-    title: "Stabilize and Protect",
-    detail: "Secure fragile walls, define no-touch zones, protect coastal ecology, and prepare conservation guidelines before visitor programming begins."
+    title: "Stabilization",
+    points: [
+      "Reinforce unstable coral-stone walls using approved conservation methods",
+      "Define restricted and accessible zones across the site",
+      "Implement basic infrastructure for safety (paths, barriers, signage)",
+      "Ensure all work aligns with environmental and heritage regulations"
+    ]
   },
   {
     phase: "03",
-    title: "Adapt and Program",
-    detail: "Fit selected structures with low-impact exhibits, shaded routes, interpretation, workshops, and service access without erasing the historic fabric."
+    title: "Adaptation",
+    points: [
+      "Convert selected houses into activity spaces with minimal physical intervention",
+      "Install low-impact elements (tools, seating, shading) without altering original structures",
+      "Introduce greenhouse and hydroponic systems in designated non-sensitive areas",
+      "Set up staff zones and service routes to support operations without disrupting the site"
+    ]
   },
   {
     phase: "04",
-    title: "Operate and Monitor",
-    detail: "Launch guided visits, school programs, food and craft partnerships, maintenance schedules, visitor caps, and ongoing environmental monitoring."
+    title: "Operation",
+    points: [
+      "Train staff and guides to manage visitor flow and interpret the site",
+      "Implement controlled visitor routes and capacity limits",
+      "Establish maintenance schedules for structures and environmental monitoring",
+      "Coordinate ongoing oversight with public institutions for long-term management"
+    ]
   }
 ];
 
 const IMPACT_LIMITATIONS = [
   {
-    title: "Anticipated Impacts",
+    title: "Impacts",
     points: [
-      "Preserves a visible link to Qatar's pre-oil maritime identity.",
-      "Creates hands-on education through pearling, trade, agriculture, family life, and oral memory.",
-      "Supports sustainable cultural tourism while giving local families and institutions active roles.",
-      "Builds environmental awareness through coastal conservation, water use, and climate resilience."
+      "Preserves a coastal heritage site",
+      "Enables active learning of pre-oil life",
+      "Supports cultural tourism",
+      "Demonstrates contemporary sustainability practices, including hydroponic agriculture as a response to water scarcity",
+      "Raises awareness of environmental constraints"
     ]
   },
   {
-    title: "Limitations and Risks",
+    title: "Limitations",
     points: [
-      "Fragile ruins require expert conservation and continuous maintenance.",
-      "Too many visitors could damage the site or weaken the feeling of authenticity.",
-      "Commercial programs must not overpower cultural memory or community authority.",
-      "Coastal climate exposure means the project needs monitoring, repair budgets, and adaptive management."
+      "Fragile coral-stone buildings limit how much can be restored or modified",
+      "High visitor traffic can wear down surfaces and weaken structures",
+      "Cars and road access can damage the site and nearby landscape",
+      "Staff housing and service areas risk disrupting the historic setting if not carefully placed",
+      "Salt, wind, and humidity cause ongoing damage and require constant maintenance"
     ]
   }
 ];
@@ -526,34 +603,33 @@ export default function App() {
   const introPhaseData = introPhase === 1
     ? {
         eyebrow: "The Site",
-        title: <>A Ghost on the <br /> Northern Coast</>,
+        title: <>A Coastal Settlement <br /> in Decline</>,
         image: "/images/qatar-map.png",
         imageAlt: "Map of Qatar showing Al Jumail",
         imageClassName: "object-contain p-6 md:p-10",
         body: (
           <>
             <p className="text-lg md:text-2xl leading-snug font-serif text-[#F2EDE2]/85">
-              Al Jumail is a 19th-century pearling and fishing village located on the northern coast of Qatar.
-              Once a vital center of maritime life, it now stands abandoned.
+              Al Jumail is a coastal village in northern Qatar, established in the 18th–19th century and inhabited until the mid-20th century. It was historically supported by pearling and fishing. Today, the site is abandoned. Coral-stone buildings remain in varying states of decay, shaped by wind, salt, and time.
             </p>
             <p className="text-base md:text-lg leading-relaxed text-[#F2EDE2]/65 max-w-xl border-l border-[#D8B66A]/30 pl-6">
-              This site represents more than physical ruins. It reflects a disappearing connection between contemporary society and its ancestral roots.
+              The site represents both physical deterioration and a weakening connection between contemporary society and pre-oil ways of life.
             </p>
           </>
         )
       }
     : introPhase === 2
       ? {
-          eyebrow: "Chronicle",
-          title: <>The Arc of Time</>,
+          eyebrow: "Historical Context",
+          title: <>From Maritime Life <br /> to Abandonment</>,
           image: "/images/Aerial_View_of_Al_Jemail_Fishermen's_Village (1).jpg",
           imageAlt: "Aerial view of Al Jumail fishermen's village",
           imageClassName: "object-cover",
           body: (
             <div className="space-y-6">
               {[
-                { year: "mid 19th century", title: "Founding", desc: "The first coral blocks are laid by the sea, establishing Al Jumail as a maritime gateway." },
-                { year: "1930s", title: "Pearl Crisis", desc: "The global market shifts; the tide begins to turn as synthetic pearls emerge." },
+                { year: "18th–19th Century", title: "Settlement", desc: "Al Jumail develops as a small coastal community dependent on pearling and fishing." },
+                { year: "Early 20th Century", title: "Economic Shift", desc: "The decline of natural pearl markets affects coastal settlements across the Gulf." },
               ].map((item) => (
                 <div key={item.year} className="border-l border-[#D8B66A]/25 pl-6 pb-3 relative">
                   <div className="absolute left-[-2px] top-0 w-[4px] h-full bg-[#D8B66A]" />
@@ -566,16 +642,16 @@ export default function App() {
           )
         }
       : {
-          eyebrow: "Chronicle",
-          title: <>The Arc of Time</>,
+          eyebrow: "Historical Context",
+          title: <>From Maritime Life <br /> to Abandonment</>,
           image: "/images/210706162824-18-al-mafjar-3624.jpg",
           imageAlt: "Al Jumail village ruins",
           imageClassName: "object-cover",
           body: (
             <div className="space-y-6">
               {[
-                { year: "mid 20th century", title: "The Departure", desc: "Modernity calls from the south; Al Jumail becomes a silent ghost of the coast." },
-                { year: "After it's revitalization", title: "The Rebirth", desc: "A digital sanctuary for ancestral memory, reimagined through immersive architecture." },
+                { year: "Mid 20th Century", title: "Migration", desc: "Population shifts toward urban centers following the rise of the oil economy." },
+                { year: "Present", title: "Abandonment", desc: "The village remains as a historical site with significant cultural value but limited active use." },
               ].map((item) => (
                 <div key={item.year} className="border-l border-[#D8B66A]/25 pl-6 pb-3 relative">
                   <div className="absolute left-[-2px] top-0 w-[4px] h-full bg-[#D8B66A]" />
@@ -598,7 +674,7 @@ export default function App() {
           transition={{ delay: 1 }}
           className="flex gap-8"
         >
-          <span>Al Jumail Revitalization</span>
+          <span>Al Jumail, Northern Coast of Qatar</span>
         </motion.div>
         <motion.div 
           initial={{ opacity: 0, x: 20 }}
@@ -645,21 +721,37 @@ export default function App() {
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
           >
-            <h1 className="text-6xl md:text-[140px] font-bold mb-10 tracking-tighter leading-[0.85]">
+            <h1 className="text-[clamp(3rem,12vmin,8.75rem)] font-bold mb-[clamp(1rem,4vmin,2.5rem)] tracking-tighter leading-[0.85]">
               Tides of Time
             </h1>
-            <h2 className="text-xl md:text-3xl font-serif mb-12 opacity-80 max-w-3xl mx-auto leading-tight italic font-light">
-              Reimagining Al Jumail Village as a Living Memory
+            <h2 className="text-[clamp(1.25rem,4vmin,1.875rem)] font-serif mb-[clamp(1.5rem,5vmin,3rem)] opacity-80 max-w-3xl mx-auto leading-tight italic font-light">
+              Reimagining Al Jumail as a Living Memory
             </h2>
-            <div className="flex items-center justify-center gap-6 opacity-60">
-              <div className="h-[1px] w-12 bg-white" />
-              <p className="text-xs md:text-sm uppercase tracking-[0.4em] font-light">
+            <div className="flex items-center justify-center gap-[clamp(0.5rem,2vmin,1.5rem)] opacity-60">
+              <div className="h-[1px] w-[clamp(1.5rem,4vmin,3rem)] bg-white" />
+              <p className="text-[clamp(0.75rem,1.5vmin,0.875rem)] uppercase tracking-[0.4em] font-light">
                 Immersive Heritage Experience
               </p>
-              <div className="h-[1px] w-12 bg-white" />
+              <div className="h-[1px] w-[clamp(1.5rem,4vmin,3rem)] bg-white" />
             </div>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
+          animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+          transition={{ delay: 2, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          onMouseEnter={() => setIsHovering(true)}
+          onMouseLeave={() => setIsHovering(false)}
+          className="absolute bottom-[4vmin] left-[4vmin] z-20 w-[24vmin] p-[1.5vmin] bg-black/40 backdrop-blur-md border border-white/10 rounded-[1vmin]"
+        >
+          <p className="text-[0.9vmin] font-serif text-white/90 leading-[1.6] mb-[1vmin]">
+            Tides of Time proposes the revitalization of Al Jumail Village as a living heritage site. The project transforms an abandoned coastal settlement into an active cultural landscape where visitors learn through participation, conservation, and guided experience.
+          </p>
+          <p className="text-[0.9vmin] font-serif text-white/70 leading-[1.6]">
+            Rather than presenting heritage as something to observe from a distance, the proposal enables visitors to engage with everyday life: pearling, trade, family life, hospitality, limited agriculture, and collective memory.
+          </p>
+        </motion.div>
 
         <motion.div 
           id="hero-scroll-indicator"
@@ -668,10 +760,10 @@ export default function App() {
           transition={{ delay: 2, duration: 1 }}
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-6"
+          className="absolute bottom-[5vmin] left-1/2 -translate-x-1/2 flex flex-col items-center gap-[2.5vmin] max-h-[500px]:hidden"
         >
-          <span className="text-[10px] text-white/30 uppercase tracking-[0.6em] vertical-rl font-light">Explore</span>
-          <div className="relative w-[1px] h-20 bg-white/10 overflow-hidden">
+          <span className="text-[1vmin] text-white/30 uppercase tracking-[0.6em] vertical-rl font-light">Explore</span>
+          <div className="relative w-[1px] h-[8vmin] bg-white/10 overflow-hidden">
             <motion.div 
               animate={{ 
                 y: ["-100%", "100%"] 
@@ -710,7 +802,7 @@ export default function App() {
                 className="space-y-7 lg:space-y-9 relative z-20 text-[#F2EDE2]"
               >
                 <div className="space-y-3">
-                  <span className="text-xs uppercase tracking-[0.5em] font-bold block text-[#D8B66A]/70">
+                  <span className="text-sm md:text-base uppercase tracking-[0.4em] font-bold block text-[#D8B66A]/90">
                     {introPhaseData.eyebrow}
                   </span>
                   <h2 className="text-4xl md:text-6xl font-serif italic leading-[1.05] text-[#F0D28A]">
@@ -787,15 +879,15 @@ export default function App() {
             >
               <motion.div variants={fadeIn} className="flex items-center gap-4 text-brand-secondary/40">
                 <div className="w-12 h-[1px] bg-current" />
-                <span className="text-xs uppercase tracking-[0.4em] font-bold">The Challenge</span>
+                <span className="text-sm md:text-base uppercase tracking-[0.4em] font-bold text-brand-secondary/80">The Challenge</span>
               </motion.div>
               
               <motion.h2 variants={fadeIn} className="text-5xl md:text-7xl font-serif italic leading-[1.1] text-white">
-                A Race Against <br /> <span className="opacity-40">the Tide</span>
+                A Measurable <br /> <span className="opacity-40">Heritage Risk</span>
               </motion.h2>
               
               <motion.p variants={fadeIn} className="text-xl opacity-60 font-serif leading-relaxed italic max-w-sm text-[#E8E2D9]">
-                "We are not just losing stones; we are losing the very breath of our ancestors."
+                The site faces three primary risks:
               </motion.p>
               
               <div className="space-y-8">
@@ -811,6 +903,10 @@ export default function App() {
                   </Fragment>
                 ))}
               </div>
+              
+              <motion.p variants={fadeIn} className="text-lg opacity-60 font-serif leading-relaxed italic text-[#E8E2D9] pt-4">
+                Without intervention, both the physical site and its cultural meaning will continue to deteriorate.
+              </motion.p>
             </motion.div>
           </div>
         </section>
@@ -826,16 +922,35 @@ export default function App() {
         </motion.div>
         
         <div className="mb-24 text-center lg:text-left relative z-10">
-            <motion.span variants={fadeIn} className="text-xs uppercase tracking-[0.6em] opacity-40 mb-8 block font-bold">Investigation</motion.span>
-            <motion.h3 variants={fadeIn} className="text-4xl md:text-[80px] font-serif italic text-brand-accent/90 leading-none tracking-tighter">Core Inquiries</motion.h3>
+            <motion.h2 variants={fadeIn} className="text-4xl md:text-[80px] font-serif italic text-brand-accent/90 leading-none tracking-tighter mb-16">Research Questions</motion.h2>
+            
+            <motion.div 
+              variants={fadeIn} 
+              className="relative p-8 md:p-12 bg-white/40 border border-brand-accent/10 rounded-2xl backdrop-blur-xl max-w-4xl mx-auto lg:mx-0 shadow-[0_20px_60px_-15px_rgba(58,46,37,0.1)] group hover:bg-white/60 transition-colors duration-700 mb-16"
+            >
+              <div className="absolute -top-4 -left-4 md:-top-6 md:-left-6 text-brand-accent/10 font-serif text-[120px] md:text-[180px] leading-none select-none pointer-events-none group-hover:text-brand-accent/20 transition-colors duration-700">
+                "
+              </div>
+              <h4 className="text-sm md:text-base uppercase tracking-[0.4em] text-brand-accent/60 mb-6 font-bold flex items-center justify-center lg:justify-start gap-4 relative z-10">
+                <span className="w-8 h-[1px] bg-brand-accent/40" />
+                Central Inquiry
+              </h4>
+              <p className="text-2xl md:text-4xl font-serif text-brand-accent/90 leading-[1.4] italic relative z-10">
+                How can the abandoned village of Al Jumail be revitalized into a sustainable, interactive Live Museum that preserves Qatar's heritage while meeting the social and environmental standards of the 21st century?
+              </p>
+            </motion.div>
         </div>
         
+        <div className="mb-12 relative z-10 text-center lg:text-left">
+           <motion.h4 variants={fadeIn} className="text-sm md:text-base uppercase tracking-[0.4em] text-brand-accent/80 block font-bold">Core Questions</motion.h4>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 relative z-10">
           {[
-            "How can Al Jumail be transformed into a sustainable and interactive live museum?",
-            "How can heritage preservation coexist with modern environmental and social demands?",
-            "How can visitors actively experience, rather than passively observe, cultural history?",
-            "How can sustainability, architecture, and storytelling be integrated into one system?"
+            "How can Al Jumail be adapted into a public heritage site without damaging its fragile fabric?",
+            "How can visitors actively engage with history instead of passively observing it?",
+            "How can environmental constraints guide, rather than limit, design decisions?",
+            "How can conservation, design, and policy operate as a single system?"
           ].map((question, i) => (
             <motion.div 
               key={i}
@@ -889,47 +1004,68 @@ export default function App() {
         >
           <motion.span 
             variants={fadeIn}
-            className="text-xs uppercase tracking-[1em] text-brand-accent/30 mb-12 block font-medium"
+            className="text-sm md:text-base uppercase tracking-[0.4em] text-brand-accent/80 mb-12 block font-bold"
           >
-            The Philosophy
+            Project Approach
           </motion.span>
           
-          <div className="flex flex-col gap-4 md:gap-8">
-            <div className="overflow-hidden">
-              <motion.h2 
-                variants={{
-                  initial: { y: "100%" },
-                  whileInView: { y: 0 }
-                }}
-                transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-                className="text-5xl md:text-[120px] font-serif tracking-tighter leading-[1.1] italic text-brand-accent/90"
-              >
-                From preservation
-              </motion.h2>
+            <div className="flex flex-col gap-4 md:gap-8">
+              <div className="overflow-hidden">
+                <motion.h2 
+                  variants={{
+                    initial: { y: "100%" },
+                    whileInView: { y: 0 }
+                  }}
+                  transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
+                  className="text-5xl md:text-[120px] font-serif tracking-tighter leading-[1.1] italic text-brand-accent/90"
+                >
+                  From preservation
+                </motion.h2>
+              </div>
+              
+              <div className="overflow-hidden">
+                <motion.div
+                  variants={{
+                    initial: { y: "100%" },
+                    whileInView: { y: 0 }
+                  }}
+                  transition={{ duration: 1.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                  className="flex flex-col md:flex-row items-center justify-center gap-6"
+                >
+                  <span className="text-3xl md:text-6xl font-serif text-brand-accent/40 lowercase">to</span>
+                  <span className="relative inline-block px-12 py-4 md:py-6 group">
+                     <motion.div 
+                       initial={{ scaleX: 0 }}
+                       whileInView={{ scaleX: 1 }}
+                       transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                       className="absolute inset-0 bg-brand-accent origin-left"
+                     />
+                     <span className="relative z-10 text-white text-5xl md:text-[100px] leading-none">use.</span>
+                  </span>
+                </motion.div>
+              </div>
             </div>
-            
-            <div className="overflow-hidden">
-              <motion.div
-                variants={{
-                  initial: { y: "100%" },
-                  whileInView: { y: 0 }
-                }}
-                transition={{ duration: 1.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                className="flex flex-col md:flex-row items-center justify-center gap-6"
-              >
-                <span className="text-3xl md:text-6xl font-serif text-brand-accent/40 lowercase">to</span>
-                <span className="relative inline-block px-12 py-4 md:py-6 group">
-                   <motion.div 
-                     initial={{ scaleX: 0 }}
-                     whileInView={{ scaleX: 1 }}
-                     transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                     className="absolute inset-0 bg-brand-accent origin-left"
-                   />
-                   <span className="relative z-10 text-white text-5xl md:text-[100px] leading-none">participation.</span>
-                </span>
-              </motion.div>
-            </div>
-          </div>
+
+            <motion.div variants={fadeIn} transition={{ delay: 0.8 }} className="mt-16 max-w-3xl mx-auto space-y-8">
+              <p className="text-xl md:text-2xl font-serif leading-relaxed text-brand-accent/90 text-center italic">
+                The project shifts from static preservation to controlled activation.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left mt-8">
+                <div className="bg-white/30 backdrop-blur-sm p-6 rounded-xl border border-brand-accent/10">
+                  <h4 className="font-bold text-brand-accent tracking-widest uppercase text-xs mb-3 border-b border-brand-accent/10 pb-2">Preservation</h4>
+                  <p className="text-brand-accent/70 font-serif italic">protects the existing structures</p>
+                </div>
+                <div className="bg-white/30 backdrop-blur-sm p-6 rounded-xl border border-brand-accent/10">
+                  <h4 className="font-bold text-brand-accent tracking-widest uppercase text-xs mb-3 border-b border-brand-accent/10 pb-2">Adaptation</h4>
+                  <p className="text-brand-accent/70 font-serif italic">introduces low-impact uses</p>
+                </div>
+                <div className="bg-white/30 backdrop-blur-sm p-6 rounded-xl border border-brand-accent/10">
+                  <h4 className="font-bold text-brand-accent tracking-widest uppercase text-xs mb-3 border-b border-brand-accent/10 pb-2">Participation</h4>
+                  <p className="text-brand-accent/70 font-serif italic">allows visitors to experience daily life practices</p>
+                </div>
+              </div>
+            </motion.div>
 
           <motion.div 
             variants={fadeIn}
@@ -953,23 +1089,31 @@ export default function App() {
             className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-16 lg:gap-24 items-start"
           >
             <motion.div variants={fadeIn} className="space-y-6">
-              <span className="text-xs uppercase tracking-[0.6em] text-[#D8B66A]/60 font-bold block">Core Vision</span>
+              <span className="text-sm md:text-base uppercase tracking-[0.4em] text-[#D8B66A]/90 font-bold block">Core Vision</span>
               <h2 className="text-5xl md:text-7xl font-serif italic leading-[1.05] text-[#F0D28A]">
-                A Living Museum of Daily Life
+                A Living Heritage Site
               </h2>
             </motion.div>
 
             <motion.div variants={fadeIn} className="space-y-8">
               <p className="text-2xl md:text-4xl font-serif italic leading-tight text-[#F2EDE2]/90">
-                Transform Al Jumail into a living museum where visitors actively experience pre-oil Qatari life through interaction, participation, and daily activities.
+                Al Jumail becomes a site where heritage is experienced through activity. The goal is not reconstruction, but careful reuse.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {["Interaction", "Participation", "Daily Activities"].map((principle) => (
-                  <div key={principle} className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
-                    <p className="text-[10px] uppercase tracking-[0.35em] text-[#D8B66A]/55 font-bold mb-4">Principle</p>
-                    <h3 className="text-xl font-serif italic text-white">{principle}</h3>
-                  </div>
-                ))}
+              <div>
+                <p className="text-[10px] uppercase tracking-[0.4em] text-[#D8B66A]/80 font-bold mb-6">Three guiding principles:</p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  {[
+                    { title: "Interaction", desc: "Visitors engage with tools, spaces, and processes" },
+                    { title: "Participation", desc: "Activities reflect real practices" },
+                    { title: "Everyday Life", desc: "Focus on work, family, and social interaction" }
+                  ].map((principle) => (
+                    <div key={principle.title} className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 flex flex-col">
+                      <p className="text-[10px] uppercase tracking-[0.35em] text-[#D8B66A]/55 font-bold mb-4">Principle</p>
+                      <h3 className="text-xl font-serif italic text-white mb-3">{principle.title}</h3>
+                      <p className="text-sm leading-relaxed text-white/60">{principle.desc}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </motion.div>
           </motion.div>
@@ -984,7 +1128,7 @@ export default function App() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
             viewport={{ once: true }}
-            className="order-2 lg:order-1 relative aspect-[16/11] w-full"
+            className="order-2 lg:order-1 relative w-full flex flex-col"
           >
             <motion.div 
               style={{ rotate: useTransform(scrollYProgress, [0.3, 0.6], [0, 15]) }}
@@ -993,8 +1137,18 @@ export default function App() {
               <span className="animate-spin-slow">Live Museum • Cultural System • </span>
             </motion.div>
 
+            <motion.div variants={fadeIn} className="flex items-center gap-4 text-brand-accent/40 mb-6 relative z-10">
+              <span className="text-sm md:text-base uppercase tracking-[0.4em] font-bold text-brand-accent/80">The Intervention</span>
+            </motion.div>
+            <motion.h2 variants={fadeIn} className="text-5xl md:text-8xl font-serif italic leading-none text-brand-accent tracking-tighter mb-8 relative z-10">
+              The Solution
+            </motion.h2>
+            <motion.p variants={fadeIn} className="text-xl md:text-2xl leading-relaxed opacity-80 font-serif text-brand-accent italic mb-12 relative z-10">
+              The project transforms Al Jumail from an abandoned site into an interactive living museum. Visitors do not just walk through ruins — they move through a sequence of spaces where each building represents a part of daily life.
+            </motion.p>
+
             {/* Before/After Slider Container */}
-            <div className="absolute inset-0 w-full h-full rounded-[32px] overflow-hidden shadow-[0_50px_100px_-20px_rgba(58,46,37,0.25)] group z-10">
+            <div className="relative aspect-[16/11] w-full rounded-[32px] overflow-hidden shadow-[0_50px_100px_-20px_rgba(58,46,37,0.25)] group z-10">
               
               {/* Original Image (Background / Left Side) */}
               <img 
@@ -1053,10 +1207,14 @@ export default function App() {
               </div>
             </div>
 
-            <div className="absolute -bottom-12 left-0 w-full flex items-center gap-6 px-4">
+            <div className="relative mt-8 w-full flex items-center gap-6 px-4">
                <div className="w-24 h-[1px] bg-brand-accent/20" />
                <p className="text-[10px] uppercase tracking-[0.6em] opacity-40 font-bold whitespace-nowrap">Conceptual Restoration Strategy</p>
             </div>
+            
+            <motion.p variants={fadeIn} className="text-lg md:text-xl font-serif text-brand-accent/80 italic mt-12 pt-6 border-t border-brand-accent/10">
+              Visitors move through the site by selecting and exploring these houses, each offering hands-on activities that bring the past into the present.
+            </motion.p>
           </motion.div>
           
           <motion.div 
@@ -1064,26 +1222,26 @@ export default function App() {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true }}
-            className="order-1 lg:order-2 space-y-12"
+            className="order-1 lg:order-2 space-y-12 lg:pt-[180px]"
           >
-            <motion.div variants={fadeIn} className="flex items-center gap-4 text-brand-accent/40">
-              <span className="text-xs uppercase tracking-[0.5em] font-bold">The Response</span>
-            </motion.div>
-            <motion.h2 variants={fadeIn} className="text-5xl md:text-8xl font-serif italic leading-none text-brand-accent tracking-tighter">
-              A Living <br /> Experience
-            </motion.h2>
             <motion.p variants={fadeIn} className="text-xl md:text-2xl leading-relaxed opacity-80 font-serif text-brand-accent italic">
-              The intervention transforms Al Jumail into a living heritage museum where restored village structures host interactive programs about pearling, trade, family life, agriculture, hospitality, and collective memory.
+              The experience is organized as a story map of the village, where each location is explored through activity, not observation.
             </motion.p>
-            <div className="space-y-6">
+            <div className="space-y-8">
+               <p className="text-lg opacity-80 font-bold tracking-widest text-brand-accent uppercase mb-6">The solution includes:</p>
                {[
-                 "Stabilized ruins and adaptive reuse",
-                 "Hands-on cultural learning houses",
-                 "Community-led memory and policy alignment"
+                 { title: "Stabilize structures", desc: "Stabilizing fragile structures and reusing them only where conservation allows" },
+                 { title: "Clear visitor route", desc: "Creating a clear visitor route across the site with guided movement and controlled access" },
+                 { title: "System of six houses", desc: "Transforming the village into a system of six main houses, each representing a core part of life: pearling, trade, family life, social gathering, agriculture, and memory" },
+                 { title: "Support spaces", desc: "Supporting the experience with additional spaces such as a food area and service zones for operations" },
+                 { title: "Low-impact interventions", desc: "Ensuring all interventions remain low-impact and reversible to protect the original fabric" }
                ].map((item, i) => (
-                 <motion.div key={i} variants={fadeIn} className="flex items-center gap-6 group">
-                    <div className="w-12 h-12 rounded-full border border-brand-accent/10 flex items-center justify-center text-xs font-bold group-hover:bg-brand-accent group-hover:text-white transition-all duration-500">0{i+1}</div>
-                    <span className="text-lg opacity-60 group-hover:opacity-100 transition-opacity uppercase tracking-widest text-brand-accent">{item}</span>
+                 <motion.div key={i} variants={fadeIn} className="flex gap-6 group items-start">
+                    <div className="w-12 h-12 flex-shrink-0 rounded-full border border-brand-accent/10 flex items-center justify-center text-xs font-bold text-brand-accent group-hover:bg-brand-accent group-hover:text-white transition-all duration-500">0{i+1}</div>
+                    <div>
+                      <span className="text-lg opacity-80 group-hover:opacity-100 transition-opacity uppercase tracking-widest text-brand-accent block mb-2">{item.title}</span>
+                      <p className="text-sm font-serif italic text-brand-accent/60 leading-relaxed">{item.desc}</p>
+                    </div>
                  </motion.div>
                ))}
             </div>
@@ -1094,8 +1252,8 @@ export default function App() {
       {/* 7. INTERACTIVE MAP SECTION */}
       <section id="map" className="relative w-full bg-brand-secondary overflow-hidden flex flex-col py-24">
         <div className="relative z-10 p-12 text-center pointer-events-none">
-            <h3 id="site-interactive-title" className="text-3xl md:text-4xl font-serif text-brand-accent tracking-widest uppercase">The Interactive Site</h3>
-            <p className="text-sm opacity-50 mt-4 tracking-[0.2em] text-brand-accent font-light">Select a spatial node to reveal its rebirth</p>
+            <h3 id="site-interactive-title" className="text-3xl md:text-4xl font-serif text-brand-accent tracking-widest uppercase">The Interactive Story Map</h3>
+            <p className="text-sm md:text-base opacity-70 mt-4 tracking-[0.2em] text-brand-accent font-bold mb-8">Click on the houses in the map below to explore their details and programs</p>
         </div>
 
         <div className="relative z-10 w-full flex-grow flex items-center justify-center p-4 md:p-12">
@@ -1271,7 +1429,7 @@ export default function App() {
         <div className="absolute left-0 bottom-0 w-full h-1/2 bg-gradient-to-t from-brand-accent/5 to-transparent pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <motion.div {...fadeIn} className="max-w-3xl mx-auto mb-24 text-brand-accent">
-            <span className="text-xs uppercase tracking-[0.5em] opacity-40 mb-8 block">Holistic Vision</span>
+            <span className="text-sm md:text-base uppercase tracking-[0.4em] text-brand-accent/80 mb-8 block font-bold">Holistic Vision</span>
             <h2 className="text-4xl md:text-5xl font-serif leading-tight">
               The project extends beyond cultural preservation into a complete <span className="italic">visitor experience.</span>
             </h2>
@@ -1279,9 +1437,9 @@ export default function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
-              { t: "Culinary experiences", d: "Rooted in local agriculture, bringing ancient flavors to the modern palate." },
-              { t: "Sustainable farming", d: "Integrated systems that treat land restoration as a primary duty." },
-              { t: "Strategic partnerships", d: "Fostering community involvement and global heritage awareness." }
+              { t: "Culinary Experiences", d: "Rooted in local agriculture, the food program brings ancient flavors to the modern palate." },
+              { t: "Sustainable Farming", d: "Integrated agricultural systems treat land restoration as a primary duty." },
+              { t: "Strategic Partnerships", d: "Partnerships foster community involvement and global heritage awareness." }
             ].map((exp, i) => (
               <motion.div 
                 key={i}
@@ -1310,20 +1468,19 @@ export default function App() {
             className="grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-16 items-start"
           >
             <motion.div variants={fadeIn} className="space-y-6">
-              <span className="text-xs uppercase tracking-[0.6em] text-brand-accent/40 font-bold block">Proposal Logic</span>
+              <span className="text-sm md:text-base uppercase tracking-[0.4em] text-brand-accent/80 font-bold block">Visitor Experience</span>
               <h2 className="text-5xl md:text-7xl font-serif italic leading-[1.05] text-brand-accent">
-                From vision to implementation.
+                The visitor journey.
               </h2>
             </motion.div>
             <motion.div variants={fadeIn} className="space-y-6">
               <p className="text-2xl md:text-3xl font-serif italic leading-tight text-brand-accent/90">
-                The project is not only a visual restoration. It is a coordinated system where science protects the site, design makes heritage experiential, and policy makes the work feasible.
+                The visitor journey follows a clear route through the six main houses, beginning with the Pearling House near the shoreline and moving through trade, family life, and social spaces before ending at the Art & Memory House.
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
-                  { label: "Problem", text: "Decay, cultural erasure, and modernization pressure are weakening Al Jumail's physical and social memory." },
-                  { label: "Context", text: "The village represents Qatar's 19th-century pearling and fishing life before the oil economy transformed settlement patterns." },
-                  { label: "Significance", text: "Revitalization protects a national memory site while creating a public place for learning, participation, and stewardship." }
+                  { label: "Guided Movement", text: "Visitors move along defined paths supported by staff guidance, ensuring both accessibility and protection of fragile structures." },
+                  { label: "Experience Priority", text: "The experience prioritizes clarity, movement, and gradual understanding rather than spectacle." }
                 ].map((item) => (
                   <div key={item.label} className="rounded-2xl bg-white/70 border border-brand-accent/10 p-6 shadow-sm">
                     <p className="text-[10px] uppercase tracking-[0.35em] text-brand-accent/40 font-bold mb-4">{item.label}</p>
@@ -1342,9 +1499,9 @@ export default function App() {
             className="space-y-10"
           >
             <motion.div variants={fadeIn} className="max-w-3xl">
-              <span className="text-xs uppercase tracking-[0.6em] text-brand-accent/40 font-bold block mb-6">Evidence Base</span>
+              <span className="text-sm md:text-base uppercase tracking-[0.4em] text-brand-accent/80 font-bold block mb-6">Evidence Base</span>
               <h3 className="text-4xl md:text-5xl font-serif italic leading-tight">
-                The proposal responds to documented heritage value, visible decay, and national planning priorities.
+                The proposal is grounded in:
               </h3>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
@@ -1355,7 +1512,7 @@ export default function App() {
                   className="rounded-2xl border border-brand-accent/15 bg-white p-7 min-h-[230px] flex flex-col shadow-[0_20px_60px_-35px_rgba(58,46,37,0.35)]"
                 >
                   <h4 className="text-xl font-serif italic text-brand-accent mb-5">{item.title}</h4>
-                  <p className="text-sm leading-relaxed text-brand-accent/75 mt-auto">{item.detail}</p>
+                  <p className="text-sm leading-relaxed text-brand-accent/75">{item.detail}</p>
                 </motion.div>
               ))}
             </div>
@@ -1372,7 +1529,7 @@ export default function App() {
             className="space-y-10"
           >
             <motion.div variants={fadeIn} className="max-w-3xl">
-              <span className="text-xs uppercase tracking-[0.6em] text-brand-accent/40 font-bold block mb-6">Science Design Policy Integration</span>
+              <span className="text-sm md:text-base uppercase tracking-[0.4em] text-brand-accent/80 font-bold block mb-6">Science, Design, Policy</span>
               <h3 className="text-4xl md:text-5xl font-serif italic leading-tight">
                 Each discipline answers a different project risk.
               </h3>
@@ -1386,7 +1543,16 @@ export default function App() {
                 >
                   <p className="text-[10px] uppercase tracking-[0.35em] text-[#D8B66A]/60 font-bold mb-6">{item.field}</p>
                   <h4 className="text-3xl font-serif italic text-[#F0D28A] mb-6">{item.focus}</h4>
-                  <p className="text-sm md:text-base leading-relaxed text-white/75 mt-auto">{item.detail}</p>
+                  {item.detail && <p className="text-sm md:text-base leading-relaxed text-white/75 mb-6">{item.detail}</p>}
+                  <div>
+                    <ul className="space-y-2">
+                      {item.guides.map((guide, i) => (
+                        <li key={i} className="text-sm text-white/60 flex gap-3">
+                          <span className="text-[#D8B66A]/50">-</span> {guide}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </motion.div>
               ))}
             </div>
@@ -1397,40 +1563,10 @@ export default function App() {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true, margin: "-15%" }}
-            className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-16 items-start"
+            className="space-y-16"
           >
-            <motion.div variants={fadeIn} className="space-y-6">
-              <span className="text-xs uppercase tracking-[0.6em] text-brand-accent/40 font-bold block">Multimedia Method</span>
-              <h3 className="text-4xl md:text-5xl font-serif italic leading-tight">
-                The media is part of the argument.
-              </h3>
-              <p className="text-base md:text-lg leading-relaxed text-brand-accent/65">
-                The website uses visual comparison, spatial interaction, and proposed sound to communicate what a written report would explain in text: the site condition, the intervention, and the visitor experience.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {MULTIMEDIA_METHOD.map((item) => (
-                <motion.div
-                  key={item.mode}
-                  {...fadeIn}
-                  className="rounded-2xl border border-brand-accent/15 bg-white p-7 shadow-[0_20px_60px_-35px_rgba(58,46,37,0.35)]"
-                >
-                  <p className="text-[10px] uppercase tracking-[0.35em] text-brand-accent/40 font-bold mb-4">{item.mode}</p>
-                  <p className="text-sm leading-relaxed text-brand-accent/75">{item.purpose}</p>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="whileInView"
-            viewport={{ once: true, margin: "-15%" }}
-            className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-16 items-start"
-          >
-            <motion.div variants={fadeIn} className="space-y-6">
-              <span className="text-xs uppercase tracking-[0.6em] text-brand-accent/40 font-bold block">Feasibility and Pathway</span>
+            <motion.div variants={fadeIn} className="max-w-3xl space-y-6">
+              <span className="text-sm md:text-base uppercase tracking-[0.4em] text-brand-accent/80 font-bold block">Implementation</span>
               <h3 className="text-4xl md:text-5xl font-serif italic leading-tight">
                 A phased route makes the proposal realistic.
               </h3>
@@ -1438,18 +1574,48 @@ export default function App() {
                 Feasibility depends on starting with documentation and conservation before adding visitor activity. Programs are introduced only where structures, ecology, access, and staffing can support them.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {IMPLEMENTATION_PHASES.map((item) => (
-                <motion.div
-                  key={item.phase}
-                  {...fadeIn}
-                  className="rounded-2xl border border-brand-accent/15 bg-white p-7 min-h-[220px] shadow-[0_20px_60px_-35px_rgba(58,46,37,0.35)]"
-                >
-                  <p className="text-4xl font-serif italic text-brand-accent/25 mb-4">{item.phase}</p>
-                  <h4 className="text-xl font-bold tracking-tight text-brand-accent mb-4">{item.title}</h4>
-                  <p className="text-sm leading-relaxed text-brand-accent/75">{item.detail}</p>
-                </motion.div>
-              ))}
+            <div className="relative max-w-5xl lg:ml-20 mt-20">
+              {/* Vertical line for desktop */}
+              <div className="hidden md:block absolute left-[120px] lg:left-[160px] top-8 bottom-8 w-[1px] bg-brand-accent/15" />
+              
+              <div className="space-y-12 md:space-y-16">
+                {IMPLEMENTATION_PHASES.map((item) => (
+                  <motion.div
+                    key={item.phase}
+                    {...fadeIn}
+                    className="relative flex flex-col md:flex-row gap-6 md:gap-12 lg:gap-16 items-start group"
+                  >
+                    {/* Phase Number & Node */}
+                    <div className="md:w-[120px] lg:w-[160px] flex-none flex items-center md:items-start gap-4 md:gap-0 z-10">
+                      <div className="md:hidden text-brand-accent/30 font-serif italic text-5xl">
+                        {item.phase}
+                      </div>
+                      <div className="hidden md:flex w-full items-start justify-between pr-[-8px]">
+                        <span className="text-5xl lg:text-6xl font-serif italic text-brand-accent/30 group-hover:text-brand-accent transition-colors duration-500">
+                          {item.phase}
+                        </span>
+                        {/* The circle on the line */}
+                        <div className="w-3 h-3 mt-5 lg:mt-6 rounded-full border border-brand-accent bg-[#F2EDE2] group-hover:bg-[#D8B66A] group-hover:border-[#D8B66A] group-hover:scale-150 transition-all duration-500 relative -right-[6px]" />
+                      </div>
+                    </div>
+
+                    {/* Content Card */}
+                    <div className="flex-1 rounded-[32px] bg-white p-8 md:p-12 shadow-[0_20px_60px_-35px_rgba(58,46,37,0.15)] border border-brand-accent/10 group-hover:shadow-[0_30px_80px_-20px_rgba(58,46,37,0.25)] group-hover:-translate-y-1 transition-all duration-500 relative overflow-hidden">
+                      <div className="absolute top-0 right-0 w-48 h-48 bg-[radial-gradient(circle_at_top_right,rgba(216,182,106,0.15),transparent_70%)] transition-transform duration-700 group-hover:scale-150" />
+                      
+                      <h4 className="text-3xl font-serif italic text-brand-accent mb-8 relative z-10">{item.title}</h4>
+                      <ul className="space-y-5 relative z-10">
+                        {item.points.map((point, i) => (
+                          <li key={i} className="flex gap-5 text-base leading-relaxed text-brand-accent/80">
+                            <span className="mt-2.5 h-1.5 w-1.5 flex-none rounded-full bg-[#D8B66A]" />
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </motion.div>
 
@@ -1461,27 +1627,26 @@ export default function App() {
             className="space-y-10"
           >
             <motion.div variants={fadeIn} className="max-w-3xl">
-              <span className="text-xs uppercase tracking-[0.6em] text-brand-accent/40 font-bold block mb-6">Impact and Limits</span>
+              <span className="text-sm md:text-base uppercase tracking-[0.4em] text-brand-accent/80 font-bold block mb-6">Feasibility</span>
               <h3 className="text-4xl md:text-5xl font-serif italic leading-tight">
-                The project is valuable, but it must be carefully managed.
+                The project is feasible due to its phased approach, low-impact design, and alignment with existing institutions.
               </h3>
             </motion.div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {IMPACT_LIMITATIONS.map((group) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { title: "Institutional support", text: "Qatar Museums and government bodies already manage heritage sites and can lead implementation" },
+                { title: "Low intervention strategy", text: "The project avoids heavy construction, reducing cost, risk, and approval complexity" },
+                { title: "Existing site condition", text: "The village is already accessible and partially documented, allowing work to begin with minimal setup" },
+                { title: "Scalable implementation", text: "Phases allow gradual development based on funding, testing, and feedback" },
+                { title: "Operational viability", text: "Revenue from visitors, guided tours, and food services can support maintenance and staffing" }
+              ].map((item) => (
                 <motion.div
-                  key={group.title}
+                  key={item.title}
                   {...fadeIn}
-                  className="rounded-[28px] border border-brand-accent/15 bg-white p-8 md:p-10 shadow-[0_20px_60px_-35px_rgba(58,46,37,0.35)]"
+                  className="rounded-[24px] border border-brand-accent/15 bg-white p-7 shadow-[0_20px_60px_-35px_rgba(58,46,37,0.35)] flex flex-col"
                 >
-                  <h4 className="text-3xl font-serif italic text-brand-accent mb-8">{group.title}</h4>
-                  <ul className="space-y-5">
-                    {group.points.map((point) => (
-                      <li key={point} className="flex gap-4 text-sm md:text-base leading-relaxed text-brand-accent/75">
-                        <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-accent/30" />
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <h4 className="text-xl font-bold tracking-tight text-brand-accent mb-3">{item.title}</h4>
+                  <p className="text-sm leading-relaxed text-brand-accent/75">{item.text}</p>
                 </motion.div>
               ))}
             </div>
@@ -1492,19 +1657,45 @@ export default function App() {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true, margin: "-15%" }}
-            className="rounded-[36px] bg-[#121110] text-[#F2EDE2] p-10 md:p-14 lg:p-16 overflow-hidden relative"
+            className="space-y-16"
           >
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(216,182,106,0.18),transparent_30%)] pointer-events-none" />
-            <motion.div variants={fadeIn} className="relative z-10 max-w-4xl space-y-8">
-              <span className="text-xs uppercase tracking-[0.6em] text-[#D8B66A]/60 font-bold block">Decision Statement</span>
-              <h3 className="text-4xl md:text-6xl font-serif italic leading-tight text-[#F0D28A]">
-                The goal is not to rebuild the past, but to make it legible, protected, and useful for the future.
+            <motion.div variants={fadeIn} className="max-w-3xl space-y-6">
+              <span className="text-sm md:text-base uppercase tracking-[0.4em] text-brand-accent/80 font-bold block">Impact and Limits</span>
+              <h3 className="text-4xl md:text-5xl font-serif italic leading-tight">
+                The project is valuable, but it must be carefully managed.
               </h3>
-              <p className="text-lg md:text-xl leading-relaxed text-white/65">
-                A successful Al Jumail revitalization would begin with conservation, earn legitimacy through community memory, operate through clear institutional roles, and use design to translate heritage into public learning. Its value comes from balancing access with restraint: visitors can participate in the story, but the site remains protected as a fragile cultural landscape.
-              </p>
             </motion.div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+              {IMPACT_LIMITATIONS.map((group, index) => (
+                <motion.div
+                  key={group.title}
+                  {...fadeIn}
+                  className="rounded-[32px] bg-white p-10 md:p-12 shadow-[0_30px_80px_-20px_rgba(58,46,37,0.15)] border border-brand-accent/10 relative overflow-hidden flex flex-col group"
+                >
+                  <div className="absolute -top-10 -right-10 pointer-events-none opacity-[0.03] transition-opacity duration-700 group-hover:opacity-[0.06]">
+                    <span className="text-[280px] leading-none font-serif italic text-brand-accent">
+                      {index === 0 ? '+' : '–'}
+                    </span>
+                  </div>
+                  <div className="relative z-10">
+                    <p className="text-[10px] uppercase tracking-[0.35em] text-brand-accent/40 font-bold mb-6">
+                      {index === 0 ? "Positive Outcomes" : "Project Constraints"}
+                    </p>
+                    <h4 className="text-4xl font-serif italic text-brand-accent mb-10">{group.title}</h4>
+                    <ul className="space-y-6">
+                      {group.points.map((point) => (
+                        <li key={point} className="flex gap-5 text-base leading-relaxed text-brand-accent/80">
+                          <span className={`mt-2.5 h-1.5 w-1.5 flex-none rounded-full ${index === 0 ? 'bg-[#D8B66A]' : 'bg-brand-accent/40'}`} />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
+
         </div>
       </section>
 
@@ -1520,10 +1711,13 @@ export default function App() {
             className="space-y-12"
           >
             <motion.div variants={fadeIn} className="max-w-3xl">
-              <span className="text-xs uppercase tracking-[0.6em] text-[#D8B66A]/60 font-bold block mb-6">Stakeholder Landscape</span>
-              <h2 className="text-4xl md:text-6xl font-serif italic leading-tight text-white">
+              <span className="text-sm md:text-base uppercase tracking-[0.4em] text-[#D8B66A]/90 font-bold block mb-6">Stakeholder Landscape</span>
+              <h2 className="text-4xl md:text-6xl font-serif italic leading-tight text-white mb-8">
                 A heritage ecosystem led by memory, conservation, and shared enterprise.
               </h2>
+              <p className="text-lg md:text-xl font-serif leading-relaxed text-white/70 italic">
+                The project depends on cooperation between community memory holders, public institutions, educators, private partners, visitors, and operational staff.
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
@@ -1535,7 +1729,7 @@ export default function App() {
                 >
                   <p className="text-[10px] uppercase tracking-[0.35em] text-[#D8B66A]/55 font-bold mb-6">{stakeholder.role}</p>
                   <h3 className="text-3xl font-serif italic text-[#F0D28A] mb-6">{stakeholder.group}</h3>
-                  <p className="text-sm md:text-base leading-relaxed text-white/60 mt-auto">{stakeholder.detail}</p>
+                  <p className="text-sm md:text-base leading-relaxed text-white/60">{stakeholder.detail}</p>
                 </motion.div>
               ))}
             </div>
@@ -1549,7 +1743,7 @@ export default function App() {
             className="space-y-12"
           >
             <motion.div variants={fadeIn} className="max-w-3xl">
-              <span className="text-xs uppercase tracking-[0.6em] text-[#D8B66A]/60 font-bold block mb-6">National Alignment</span>
+              <span className="text-sm md:text-base uppercase tracking-[0.4em] text-[#D8B66A]/90 font-bold block mb-6">National Alignment</span>
               <h2 className="text-4xl md:text-6xl font-serif italic leading-tight text-white">
                 Al Jumail directly supports Qatar's development priorities.
               </h2>
@@ -1578,6 +1772,35 @@ export default function App() {
       </section>
 
       {/* 9. TIMELINE SECTION (REMOVED - INTEGRATED INTO INTRO) */}
+
+      {/* 11. CONCLUSION */}
+      <section id="conclusion" className="relative bg-white text-brand-accent py-[160px] overflow-hidden border-t border-brand-accent/5">
+        <motion.div
+          variants={staggerContainer}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true, margin: "-15%" }}
+          className="max-w-7xl mx-auto px-6"
+        >
+          <div className="rounded-[36px] bg-[#121110] border border-white/10 text-[#F2EDE2] p-10 md:p-14 lg:p-16 overflow-hidden relative text-center shadow-2xl">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(216,182,106,0.08),transparent_50%)] pointer-events-none" />
+            <motion.div variants={fadeIn} className="relative z-10 max-w-4xl mx-auto space-y-8">
+              <span className="text-sm md:text-base uppercase tracking-[0.4em] text-[#D8B66A]/90 font-bold block">Conclusion</span>
+              <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif italic leading-tight text-[#F0D28A]">
+                Tides of Time proposes a clear and feasible approach to revitalizing Al Jumail.
+              </h3>
+              <div className="space-y-6 text-lg md:text-xl leading-relaxed text-white/65">
+                <p>
+                  The project does not attempt to reconstruct the past. Instead, it protects what remains and introduces controlled, meaningful uses that allow visitors to understand the site through experience.
+                </p>
+                <p>
+                  Its strength lies in balance: access without damage, interpretation without distortion, and use without loss of authenticity.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </section>
 
       {/* 10. FOOTER */}
       <footer className="py-24 border-t border-brand-accent/5 bg-white relative overflow-hidden">
