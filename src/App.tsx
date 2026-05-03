@@ -47,7 +47,7 @@ const mapNodes = [
   },
   { 
     id: 3, 
-    title: "Trade & Exchange House", 
+    title: "Trade House", 
     polygon: "49.95,20.27 47.20,19.48 47.00,15.93 55.77,15.53 56.02,19.68 52.44,20.67 52.25,26.89 58.83,29.46 57.75,33.32 55.32,40.33 46.43,35.00 50.52,28.08 49.69,19.38",
     description: "Focus: Local trade systems, goods, and economic exchange.", 
     activities: [
@@ -98,10 +98,10 @@ const mapNodes = [
     ], 
     caption: "Food, water, and survival",
     images: [
-      { src: "/images/Agriculture Experience House/this is the agricultureal experience house with ttaste diff local dates water and foood storage foood and drink preparationn and so on.PNG", caption: "Agricultural Experience House showing local dates, water and food storage, and preparation practices." },
-      { src: "/images/Agriculture Experience House/the agricultural experience house other pov.PNG", caption: "Alternative interior view of the Agricultural Experience House." },
-      { src: "/images/Agriculture Experience House/taste the heritage taste the dates in agricultural exp house.PNG", caption: "Taste-the-heritage date tasting experience in the agricultural house." },
-      { src: "/images/Agriculture Experience House/water and food storage banner and items in the agricultural experince house.PNG", caption: "Water and food storage interpretation zone in the agricultural house." }
+      { src: "/images/Agriculture Experience House/this is the agricultureal experience house with ttaste diff local dates water and foood storage foood and drink preparationn and so on.PNG", caption: "Sustenance House setting showing local dates, water and food storage, and preparation practices." },
+      { src: "/images/Agriculture Experience House/the agricultural experience house other pov.PNG", caption: "Alternative interior view of the Sustenance House." },
+      { src: "/images/Agriculture Experience House/taste the heritage taste the dates in agricultural exp house.PNG", caption: "Taste-the-heritage date tasting experience in the Sustenance House." },
+      { src: "/images/Agriculture Experience House/water and food storage banner and items in the agricultural experince house.PNG", caption: "Water and food storage interpretation zone in the Sustenance House." }
     ]
   },
   { 
@@ -126,48 +126,56 @@ const mapNodes = [
   },
   { 
     id: 7, 
-    title: "Garden & Greenhouse", 
+    title: "Agricultural Garden & Greenhouse", 
     polygon: "29.67,47.84 39.59,39.54 46.88,46.95 37.92,57.23 28.91,47.84 31.34,49.92 13.43,49.13 13.43,55.65 27.31,55.25 27.31,51.79 32.10,51.89",
-    description: "Focus: Contemporary sustainability interpretation. This zone introduces hydroponics as a contemporary response to the environmental limits of the site, without presenting it as a historical practice.", 
+    description: "Focus: Water-efficient cultivation and modern environmental learning.", 
     activities: [
-      "Demonstration planting", 
-      "Hydroponic cultivation systems adapted to arid, saline conditions",
-      "Water-efficient closed-loop irrigation"
+      "Exploring hydroponic growing systems adapted to arid conditions",
+      "Learning water conservation and closed-loop irrigation techniques",
+      "Observing how crops can grow in saline and desert environments",
+      "Connecting traditional survival strategies with modern sustainability"
     ], 
-    caption: "Greenhouse systems and water heritage",
+    caption: "Adapting the past for the future",
     images: [
-      { src: "/images/Agricultural Garden & Greenhouse/green house sth bird view.png", caption: "Bird's-eye view of the greenhouse" },
-      { src: "/images/Agricultural Garden & Greenhouse/irrigation fallaj demosntration green house.png", caption: "Falaj irrigation demonstration" }
+      { src: "/images/Agricultural Garden & Greenhouse/BIRD EYE VIEW OF GREENHOUSE WITH DESER VIEW.jpg", caption: "Bird's-eye view of the greenhouse within the desert setting." },
+      { src: "/images/Agricultural Garden & Greenhouse/greenhouse bird eye view (shore viewable).jpg", caption: "Aerial greenhouse view with the shoreline visible." },
+      { src: "/images/Agricultural Garden & Greenhouse/hydroponic in greenhouse.PNG", caption: "Hydroponic cultivation systems inside the greenhouse." },
+      { src: "/images/Agricultural Garden & Greenhouse/vegetables inn greenhouse.PNG", caption: "Vegetable growth and planting beds in the greenhouse." }
     ]
   },
   { 
     id: 8, 
-    title: "Food Space", 
+    title: "Restaurant & Cafe", 
     polygon: "39.39,61.97 51.67,51.30 63.44,59.50 53.21,74.92 45.15,67.31 16.56,68.39 17.27,63.36 42.21,64.34 38.88,61.58",
-    description: "Focus: Local cuisine.", 
+    description: "Focus: Traditional cuisine as part of the cultural journey.", 
     activities: [
-      "Simple, locally inspired meals", 
-      "Outdoor seating integrated with the site"
+      "Tasting simple locally inspired meals connected to daily life",
+      "Observing preparation of traditional foods and drinks",
+      "Resting and gathering in a shaded outdoor seating area",
+      "Connecting food, hospitality, and cultural memory"
     ], 
-    caption: "Dining through local flavor",
+    caption: "Taste, pause, and connection",
     images: [
-      { src: "/images/Restaurant & Cafe/restaurant cafe entrance.png", caption: "Restaurant and cafe entrance" },
-      { src: "/images/Restaurant & Cafe/restaurant outdoor.png", caption: "Outdoor dining experience" },
-      { src: "/images/Restaurant & Cafe/local dishes in the restaurant.png", caption: "Local dishes served through heritage storytelling" }
+      { src: "/images/Restaurant & Cafe/restaurant interior dining.jpg", caption: "Restaurant interior dining space." },
+      { src: "/images/Restaurant & Cafe/restaurant with shore view.PNG", caption: "Restaurant seating with shoreline view." },
+      { src: "/images/Restaurant & Cafe/shaded terrace restaurant.jpg", caption: "Shaded terrace dining area." }
     ]
   },
   { 
     id: 9, 
     title: "Service Area", 
     polygon: "61.90,81.54 72.01,68.20 79.55,71.06 78.15,83.41 79.68,86.87 79.68,90.82 69.77,91.61 61.33,80.94",
-    description: "Focus: Operations.", 
+    description: "Focus: Operational support, staffing, and site maintenance.", 
     activities: [
-      "Staff circulation", 
-      "Maintenance and logistics"
+      "Coordinating guides and facilitators across the site",
+      "Managing materials, tools, and supplies used in visitor activities",
+      "Supporting maintenance and conservation of heritage structures",
+      "Handling visitor flow, logistics, and daily operations"
     ], 
-    caption: "Operations behind the visitor route",
+    caption: "Behind the scenes of the experience",
     images: [
-      { src: "/images/Staff & Service Area/staff area map normla map.png", caption: "Staff and service area map" }
+      { src: "/images/Staff & Service Area/staff and servicee.PNG", caption: "Primary staff and service zone." },
+      { src: "/images/Staff & Service Area/staff and services other pov.PNG", caption: "Alternate view of staff and service operations area." }
     ]
   }
 ];
@@ -462,7 +470,18 @@ const MULTIMEDIA_METHOD = [
   }
 ];
 
-const CAFE_OPERATIONS_POLICY = [
+type CafePolicyItem = {
+  title: string;
+  detail: string;
+};
+
+/** Featured visual for Local and Organic Sourcing (wide strip beside policy 03, before Water Efficiency). */
+const CAFE_LOCAL_SOURCING_VISUAL = {
+  src: "/images/connection between greenohouse and the restuarant SUSTAINABLE BY DESIGN Fresh produce grown on-site supports the food served in our restaurant, reducing transport and building a self-sustaining food system.PNG",
+  alt: "Aerial view linking greenhouse production to the restaurant: sustainable by design, on-site produce supporting food service.",
+};
+
+const CAFE_OPERATIONS_POLICY: CafePolicyItem[] = [
   {
     title: "No Single-Use Plastics",
     detail: "Plastic cups, bottles, straws, and packaging are not permitted. Only reusable, biodegradable, or compostable materials may be used."
@@ -1226,7 +1245,7 @@ export default function App() {
                 style={{ clipPath: `inset(0 0 0 ${sliderPos}%)` }}
               >
                 <img 
-                  src="/images/aerial_revitalized.png" 
+                  src="/images/new revitalized.PNG" 
                   alt="Hypothesis Concept"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
@@ -1322,7 +1341,7 @@ export default function App() {
         <div className="relative z-10 w-full flex-grow flex items-center justify-center p-4 md:px-12 md:pb-12">
           <div className="relative w-full max-w-[1600px] aspect-[1559/1009] rounded-2xl shadow-2xl overflow-hidden group/map">
             <img 
-              src="/images/aerial_revitalized.png" 
+              src="/images/new revitalized.PNG" 
               alt="Site topography"
               className="absolute inset-0 w-full h-full object-cover"
             />
@@ -1530,7 +1549,7 @@ export default function App() {
               },
               {
                 t: "Sustainability",
-                d: "Integrated systems focus on land restoration using methods like hydroponic farming and controlled-environment agriculture. These are mainly applied in the Agriculture Experience House for education and demonstration. The project also partners with Agrico and local organic farms in areas like Al Khor (Torba Farm) and Al Rayyan for use within the program."
+                d: "Integrated systems focus on land restoration using methods like hydroponic farming and controlled-environment agriculture. These are mainly applied in the Sustenance House for education and demonstration. The project also partners with Agrico and local organic farms in areas like Al Khor (Torba Farm) and Al Rayyan for use within the program."
               },
               {
                 t: "Strategic Partnerships",
@@ -1866,21 +1885,64 @@ export default function App() {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true, margin: "-15%" }}
-            className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
+            className="flex flex-col gap-6 lg:gap-8"
           >
-            {CAFE_OPERATIONS_POLICY.map((item, index) => (
+            {/* 01–02 */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+              {CAFE_OPERATIONS_POLICY.slice(0, 2).map((item, i) => (
+                <motion.div
+                  key={item.title}
+                  variants={fadeIn}
+                  className="rounded-[28px] border border-brand-accent/15 bg-white p-8 md:p-9 shadow-[0_25px_70px_-40px_rgba(58,46,37,0.25)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_35px_90px_-30px_rgba(58,46,37,0.3)]"
+                >
+                  <p className="text-[10px] uppercase tracking-[0.35em] text-brand-accent/35 font-bold mb-4">0{i + 1}</p>
+                  <h3 className="text-2xl font-serif italic text-brand-accent mb-4">{item.title}</h3>
+                  <p className="text-sm md:text-base leading-relaxed text-brand-accent/75">{item.detail}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* 03 Local sourcing + wide greenhouse–restaurant visual (chunk ~⅔ width on large screens), immediately before Water Efficiency */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
               <motion.div
-                key={item.title}
                 variants={fadeIn}
-                className="rounded-[28px] border border-brand-accent/15 bg-white p-8 md:p-9 shadow-[0_25px_70px_-40px_rgba(58,46,37,0.25)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_35px_90px_-30px_rgba(58,46,37,0.3)]"
+                className="lg:col-span-4 rounded-[28px] border border-brand-accent/15 bg-white p-8 md:p-9 shadow-[0_25px_70px_-40px_rgba(58,46,37,0.25)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_35px_90px_-30px_rgba(58,46,37,0.3)] flex flex-col justify-center"
               >
-                <p className="text-[10px] uppercase tracking-[0.35em] text-brand-accent/35 font-bold mb-4">
-                  0{index + 1}
-                </p>
-                <h3 className="text-2xl font-serif italic text-brand-accent mb-4">{item.title}</h3>
-                <p className="text-sm md:text-base leading-relaxed text-brand-accent/75">{item.detail}</p>
+                <p className="text-[10px] uppercase tracking-[0.35em] text-brand-accent/35 font-bold mb-4">03</p>
+                <h3 className="text-2xl font-serif italic text-brand-accent mb-4">{CAFE_OPERATIONS_POLICY[2].title}</h3>
+                <p className="text-sm md:text-base leading-relaxed text-brand-accent/75">{CAFE_OPERATIONS_POLICY[2].detail}</p>
               </motion.div>
-            ))}
+              <motion.div
+                variants={fadeIn}
+                className="lg:col-span-8 rounded-[28px] overflow-hidden border border-brand-accent/15 bg-brand-secondary/40 shadow-[0_35px_90px_-40px_rgba(58,46,37,0.2)] min-h-[240px] lg:min-h-[320px]"
+              >
+                <img
+                  src={CAFE_LOCAL_SOURCING_VISUAL.src}
+                  alt={CAFE_LOCAL_SOURCING_VISUAL.alt}
+                  className="w-full h-full object-cover object-center min-h-[240px] lg:min-h-[320px]"
+                  loading="lazy"
+                />
+              </motion.div>
+            </div>
+
+            {/* 04 Waste → then 05 Water Efficiency onward */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+              {CAFE_OPERATIONS_POLICY.slice(3).map((item, i) => (
+                <motion.div
+                  key={item.title}
+                  variants={fadeIn}
+                  className={`rounded-[28px] border border-brand-accent/15 bg-white p-8 md:p-9 shadow-[0_25px_70px_-40px_rgba(58,46,37,0.25)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_35px_90px_-30px_rgba(58,46,37,0.3)] ${
+                    i === CAFE_OPERATIONS_POLICY.slice(3).length - 1 ? 'md:col-span-2 max-w-3xl mx-auto w-full' : ''
+                  }`}
+                >
+                  <p className="text-[10px] uppercase tracking-[0.35em] text-brand-accent/35 font-bold mb-4">
+                    0{i + 4}
+                  </p>
+                  <h3 className="text-2xl font-serif italic text-brand-accent mb-4">{item.title}</h3>
+                  <p className="text-sm md:text-base leading-relaxed text-brand-accent/75">{item.detail}</p>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </section>
