@@ -8,14 +8,14 @@ const mapNodes = [
     id: 1, 
     title: "Pearling House", 
     polygon: "25.96,12.42 22.64,12.22 22.77,8.26 33.57,8.76 33.13,12.91 28.71,12.61 28.84,19.73 32.74,21.01 35.56,24.96 33.25,28.92 35.05,35.64 26.03,38.80 22.32,31.49 24.49,23.58 25.84,21.01 26.92,20.02 25.90,12.61",
-    description: "Focus: Maritime labor and pearling practices.", 
+    description: "Focus: Maritime labor, diving practices, and the pearling economy.", 
     activities: [
-      "Oyster opening activity using real tools", 
-      "Handling diving weights and understanding diver equipment", 
-      "Exploring pearl sorting and grading through hands-on display", 
-      "Experiencing tools, ropes, and materials used in daily pearling work"
+      "Oyster opening using traditional tools", 
+      "Handling diving weights and learning diver techniques", 
+      "Exploring pearl sorting and grading hands-on", 
+      "Understanding tools, ropes, and daily life of pearl divers"
     ], 
-    caption: "Pearls, tools, and coastal craft",
+    caption: "Pearls, risk, and the sea",
     images: [
       { src: "/images/Pearling Images/seafront entrance viiew outside.png", caption: "Seafront entrance view from the outside" },
       { src: "/images/Pearling Images/PEARLING HOUSE - Oyster Opening Activity Hands-on experience of opening oysters to discover real pearls..png", caption: "Oyster Opening Activity: Hands-on experience of opening oysters to discover real pearls." }, 
@@ -28,54 +28,55 @@ const mapNodes = [
   },
   { 
     id: 2, 
-    title: "Family Life House", 
+    title: "House of Family Life", 
     polygon: "35.43,31.54 43.04,35.19 45.92,29.07 43.61,25.31 40.80,24.13 40.86,14.84 46.30,14.35 46.30,11.08 35.05,11.18 34.66,15.14 39.84,15.14 39.33,23.73 35.75,25.81 34.92,30.45 35.17,31.04",
-    description: "Focus: Domestic space and daily routines.", 
+    description: "Focus: Domestic life, traditions, and everyday practices.", 
     activities: [
-      "Participating in textile weaving (sadu)", 
-      "Exploring traditional interior layout and family spaces", 
-      "Experiencing everyday household activities and tools",
-      "Learning about food preparation and storage practices"
+      "Participating in traditional textile weaving (Sadu)", 
+      "Experiencing henna application as a cultural practice", 
+      "Exploring household tools and daily-use objects",
+      "Understanding family interaction within a traditional majlis setting"
     ], 
-    caption: "Everyday family life and craft",
+    caption: "Home, craft, and daily life",
     images: [
-      { src: "/images/Family Life House/family life entrance.png", caption: "Family Life House entrance" },
-      { src: "/images/Family Life House/family spatial view.png", caption: "Interior spatial view of family life" },
-      { src: "/images/Family Life House/family weaving.png", caption: "Traditional weaving activity" }
+      { src: "/images/Family Life House/family house hero weaving hinna houselhold tools foood storage a lol majilis.PNG", caption: "Family house hero scene with weaving, henna, household tools, and food storage." },
+      { src: "/images/Family Life House/henna family house.PNG", caption: "Henna-based family activity inside the domestic setting." },
+      { src: "/images/Family Life House/house hold items wall ( family house ).jpg", caption: "Household items display wall in the family house." },
+      { src: "/images/Family Life House/weaving family house.jpg", caption: "Traditional weaving practice in the family house." }
     ]
   },
   { 
     id: 3, 
-    title: "Trade House", 
+    title: "Trade & Exchange House", 
     polygon: "49.95,20.27 47.20,19.48 47.00,15.93 55.77,15.53 56.02,19.68 52.44,20.67 52.25,26.89 58.83,29.46 57.75,33.32 55.32,40.33 46.43,35.00 50.52,28.08 49.69,19.38",
-    description: "Focus: Local exchange systems. This house reflects Al Jumail as a regional exchange point, not a large-scale international hub.", 
+    description: "Focus: Local trade systems, goods, and economic exchange.", 
     activities: [
-      "Interacting with goods such as fish, dates, and pearls", 
-      "Participating in a simple barter-based activity", 
-      "Exploring historic currencies and trade objects", 
-      "Understanding how local exchange supported village life"
+      "Participating in guided bartering activities", 
+      "Exploring trade goods like dates, fish, textiles, and grains", 
+      "Learning about currencies, weights, and measuring tools", 
+      "Understanding regional trade routes through visual displays"
     ], 
-    caption: "Commerce, exchange, and coastal trade",
+    caption: "Exchange, value, and connection",
     images: [
-      { src: "/images/Trade House/trade house entrance.png", caption: "Trade House entrance" },
-      { src: "/images/Trade House/trade museumt.png", caption: "Trade museum and interpretive displays" },
-      { src: "/images/Trade House/trade items.png", caption: "Traditional trade items and exchange goods" },
-      { src: "/images/Trade House/bartering or sth trade.png", caption: "Bartering activity and market simulation" },
-      { src: "/images/Trade House/currencies  trade.png", caption: "Historic currencies and coastal commerce" }
+      { src: "/images/Trade House/trade house hero with trade irams currencies trade route images bartering activities on tables.PNG", caption: "Trade house hero setting with trade items, currencies, routes, and bartering tables." },
+      { src: "/images/Trade House/trade house exterior and walk way connecting art and trade house.jpg", caption: "Trade house exterior and connecting walkway toward the art house." },
+      { src: "/images/Trade House/trade routes map and people exercise bartering activities on tables (trade house).PNG", caption: "Trade routes map with participatory bartering table activities." },
+      { src: "/images/Trade House/trade housea bartering activity.PNG", caption: "Hands-on bartering activity in the trade house." },
+      { src: "/images/Trade House/trade currency and measuring tools.PNG", caption: "Trade currencies and measuring tools display." }
     ]
   },
   { 
     id: 4, 
     title: "Majlis House", 
     polygon: "66.00,26.70 62.29,26.40 62.35,22.74 71.94,22.55 71.75,26.20 67.72,26.80 67.53,36.58 70.86,39.94 66.89,49.62 63.44,51.40 56.15,46.76 59.15,40.43 62.29,36.28 65.49,35.98 65.42,26.30",
-    description: "Focus: Social gathering and hospitality.", 
+    description: "Focus: Hospitality, gathering, and social traditions.", 
     activities: [
       "Sitting in a traditional majlis setting", 
-      "Participating in Arabic coffee preparation and serving", 
-      "Listening to guided storytelling and oral history", 
-      "Experiencing social interaction and hospitality practices"
+      "Experiencing Arabic coffee preparation and serving", 
+      "Listening to storytelling and oral histories", 
+      "Understanding social etiquette and hospitality rituals"
     ], 
-    caption: "Gathering, hospitality, and dialogue",
+    caption: "Conversation, hospitality, and identity",
     images: [
       { src: "/images/Majlis House/majilis house entrance.png", caption: "Majlis House entrance" },
       { src: "/images/Majlis House/majilis .png", caption: "Main Majlis gathering space" },
@@ -86,41 +87,41 @@ const mapNodes = [
   },
   { 
     id: 5, 
-    title: "Agriculture Experience House", 
+    title: "House of Sustenance", 
     polygon: "77.44,34.60 72.65,34.31 72.20,27.98 83.97,28.48 84.54,34.21 79.87,35.39 79.49,43.79 83.46,45.67 77.06,59.30 69.07,52.68 74.50,41.32 76.23,43.00 77.12,34.31",
-    description: "Focus: Resource-limited cultivation. Agriculture is presented as constrained and adaptive, reflecting local environmental conditions.", 
+    description: "Focus: Food, water, and survival practices in a desert environment.", 
     activities: [
-      "Learning how date palms are used in daily life", 
-      "Exploring small-scale planting adapted to harsh conditions", 
-      "Understanding water use and survival strategies", 
-      "Experiencing basic agricultural tools and techniques"
+      "Tasting different local date varieties with guided explanation", 
+      "Exploring traditional water storage using clay containers", 
+      "Learning food preservation and storage techniques", 
+      "Watching preparation of traditional meals and drinks"
     ], 
-    caption: "Food, seeds, and rural life",
+    caption: "Food, water, and survival",
     images: [
-      { src: "/images/Agriculture Experience House/agro local products.png", caption: "Local agricultural products" },
-      { src: "/images/Agriculture Experience House/dates and herbs local agro.png", caption: "Dates and herbs from the local garden" },
-      { src: "/images/Agriculture Experience House/agro .. livestoke care.png", caption: "Livestock care and rural daily life" },
-      { src: "/images/Agriculture Experience House/local seeds and herbs (agro).png", caption: "Local seeds and herb preservation" }
+      { src: "/images/Agriculture Experience House/this is the agricultureal experience house with ttaste diff local dates water and foood storage foood and drink preparationn and so on.PNG", caption: "Agricultural Experience House showing local dates, water and food storage, and preparation practices." },
+      { src: "/images/Agriculture Experience House/the agricultural experience house other pov.PNG", caption: "Alternative interior view of the Agricultural Experience House." },
+      { src: "/images/Agriculture Experience House/taste the heritage taste the dates in agricultural exp house.PNG", caption: "Taste-the-heritage date tasting experience in the agricultural house." },
+      { src: "/images/Agriculture Experience House/water and food storage banner and items in the agricultural experince house.PNG", caption: "Water and food storage interpretation zone in the agricultural house." }
     ]
   },
   { 
     id: 6, 
     title: "Art & Memory House", 
     polygon: "89.91,54.66 83.71,51.20 86.33,43.00 90.30,43.49 90.30,40.13 85.18,39.84 85.69,36.48 98.16,36.68 98.29,40.04 92.73,40.43 92.28,44.48 97.84,46.85 96.44,56.34 89.98,54.17",
-    description: "Focus: Reflection and memory.", 
+    description: "Focus: Reflection, memory, and connection between past and future.", 
     activities: [
-      "Writing and placing personal messages on a memory wall", 
-      "Viewing archival material and historical references", 
-      "Participating in simple art or drawing activities", 
-      "Contributing to a shared record of visitor experiences"
+      "Exploring drawings representing historical life", 
+      "Writing messages on the 'Message to the Future' wall", 
+      "Experiencing immersive VR scenes of the past", 
+      "Observing children's drawing activities outside the house"
     ], 
-    caption: "Art, memory, and community expression",
+    caption: "Memory, expression, and continuity",
     images: [
-      { src: "/images/Art & Memory House/art and memory entrance.png", caption: "Art & Memory House entrance" },
-      { src: "/images/Art & Memory House/community art wall art house.png", caption: "Community art wall inside the Art & Memory House" },
-      { src: "/images/Art & Memory House/arts museum.png", caption: "Art museum and memory archive" },
-      { src: "/images/Art & Memory House/painting for kids art.png", caption: "Children's painting activity" },
-      { src: "/images/Art & Memory House/send your message to bottle in the wall art.png", caption: "Message-in-a-bottle memory wall" }
+      { src: "/images/Art & Memory House/art house hero image wuth drawings from past experience with vr message to future and kids drawing out .PNG", caption: "Art house hero scene with past drawings, future-message wall, and children's artwork." },
+      { src: "/images/Art & Memory House/art house exterior ( kids drawing outside while the inside visible thorugh entrance).PNG", caption: "Art house exterior with kids drawing outside and interior visible through the entrance." },
+      { src: "/images/Art & Memory House/art house vr game experience the past through immerising to past this guy for example drivinf or whating a boat with vr headset and vr hand bands.PNG", caption: "Immersive VR activity to experience historical daily life scenarios." },
+      { src: "/images/Art & Memory House/art house message to the future wall.PNG", caption: "Message-to-the-future wall in the Art and Memory House." },
+      { src: "/images/Art & Memory House/art ( drawings from the past ).jpg", caption: "Drawings from the past archive display." }
     ]
   },
   { 
@@ -666,6 +667,11 @@ export default function App() {
       year: "Mid 20th Century",
       title: "Migration",
       desc: "After the discovery of oil, many residents left traditional villages like Al Jumail and moved to growing urban centers such as Doha, leading to the gradual abandonment of coastal settlements."
+    },
+    {
+      year: "Present",
+      title: "Abandonment",
+      desc: "Today, Al Jumail remains a historical site with significant cultural value, with its surviving fabric reflecting both heritage importance and long-term abandonment."
     }
   ];
 
