@@ -1930,7 +1930,7 @@ export default function App() {
             <motion.div variants={fadeIn} className="max-w-3xl">
               <span className="text-sm md:text-base uppercase tracking-[0.4em] text-[#D8B66A]/90 font-bold block mb-6">National Alignment</span>
               <h2 className="text-4xl md:text-6xl font-serif italic leading-tight text-white">
-                Al Jumail directly supports Qatar's development priorities.
+                This project directly supports Qatar's development priorities.
               </h2>
             </motion.div>
 
