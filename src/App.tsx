@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect, useRef, Fragment } from 'react';
 import type { MotionValue } from 'motion/react';
-import { motion, AnimatePresence, useScroll, useTransform, useSpring, useMotionValueEvent } from 'motion/react';
+import { motion, AnimatePresence, useScroll, useTransform, useSpring } from 'motion/react';
 import { X, ChevronLeft, ChevronRight, MousePointerClick } from 'lucide-react';
 
 const mapNodes = [
@@ -490,22 +490,10 @@ export default function App() {
   const [direction, setDirection] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   const [sliderPos, setSliderPos] = useState(50);
-  const [introPhase, setIntroPhase] = useState(1);
 
   const { scrollYProgress } = useScroll();
   const heroScale = useTransform(scrollYProgress, [0, 0.2], [1, 1.1]);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
-
-  const introContainerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress: introScrollY } = useScroll({
-    target: introContainerRef,
-    offset: ['start start', 'end end'],
-  });
-
-  useMotionValueEvent(introScrollY, "change", (latest) => {
-    const nextPhase = latest < 0.24 ? 1 : latest < 0.52 ? 2 : 3;
-    setIntroPhase((current) => (current === nextPhase ? current : nextPhase));
-  });
 
   const problemContainerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress: problemScrollY } = useScroll({
@@ -601,69 +589,12 @@ export default function App() {
     viewport: { once: true, margin: "-100px" }
   };
 
-  const introPhaseData = introPhase === 1
-    ? {
-        eyebrow: "The Site",
-        title: <>A Coastal Settlement <br /> in Decline</>,
-        image: "/images/qatar-map.png",
-        imageAlt: "Map of Qatar showing Al Jumail",
-        imageClassName: "object-contain p-6 md:p-10",
-        body: (
-          <>
-            <p className="text-lg md:text-2xl leading-snug font-serif text-[#F2EDE2]/85">
-              Al Jumail is a coastal village in northern Qatar, established in the 18th–19th century and inhabited until the mid-20th century. It was historically supported by pearling and fishing. Today, the site is abandoned. Coral-stone buildings remain in varying states of decay, shaped by wind, salt, and time.
-            </p>
-            <p className="text-base md:text-lg leading-relaxed text-[#F2EDE2]/65 max-w-xl border-l border-[#D8B66A]/30 pl-6">
-              The site represents both physical deterioration and a weakening connection between contemporary society and pre-oil ways of life.
-            </p>
-          </>
-        )
-      }
-    : introPhase === 2
-      ? {
-          eyebrow: "Historical Context",
-          title: <>From Maritime Life <br /> to Abandonment</>,
-          image: "/images/Aerial_View_of_Al_Jemail_Fishermen's_Village (1).jpg",
-          imageAlt: "Aerial view of Al Jumail fishermen's village",
-          imageClassName: "object-cover",
-          body: (
-            <div className="space-y-6">
-              {[
-                { year: "18th–19th Century", title: "Settlement", desc: "Al Jumail develops as a small coastal community dependent on pearling and fishing." },
-                { year: "Early 20th Century", title: "Economic Shift", desc: "The decline of natural pearl markets affects coastal settlements across the Gulf." },
-              ].map((item) => (
-                <div key={item.year} className="border-l border-[#D8B66A]/25 pl-6 pb-3 relative">
-                  <div className="absolute left-[-2px] top-0 w-[4px] h-full bg-[#D8B66A]" />
-                  <span className="text-4xl font-serif text-[#F0D28A]/60 block mb-1 italic">{item.year}</span>
-                  <h3 className="text-lg font-bold mb-2 uppercase tracking-widest text-[#F2EDE2]/90">{item.title}</h3>
-                  <p className="text-[#F2EDE2]/65 text-sm md:text-base leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          )
-        }
-      : {
-          eyebrow: "Historical Context",
-          title: <>From Maritime Life <br /> to Abandonment</>,
-          image: "/images/210706162824-18-al-mafjar-3624.jpg",
-          imageAlt: "Al Jumail village ruins",
-          imageClassName: "object-cover",
-          body: (
-            <div className="space-y-6">
-              {[
-                { year: "Mid 20th Century", title: "Migration", desc: "Population shifts toward urban centers following the rise of the oil economy." },
-                { year: "Present", title: "Abandonment", desc: "The village remains as a historical site with significant cultural value but limited active use." },
-              ].map((item) => (
-                <div key={item.year} className="border-l border-[#D8B66A]/25 pl-6 pb-3 relative">
-                  <div className="absolute left-[-2px] top-0 w-[4px] h-full bg-[#D8B66A]" />
-                  <span className="text-4xl font-serif text-[#F0D28A]/60 block mb-1 italic">{item.year}</span>
-                  <h3 className="text-lg font-bold mb-2 uppercase tracking-widest text-[#F2EDE2]/90">{item.title}</h3>
-                  <p className="text-[#F2EDE2]/65 text-sm md:text-base leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          )
-        };
+  const historyTimeline = [
+    { year: "18th–19th Century", title: "Settlement", desc: "Al Jumail develops as a small coastal community dependent on pearling and fishing." },
+    { year: "Early 20th Century", title: "Economic Shift", desc: "The decline of natural pearl markets affects coastal settlements across the Gulf." },
+    { year: "Mid 20th Century", title: "Migration", desc: "Population shifts toward urban centers following the rise of the oil economy." },
+    { year: "Present", title: "Abandonment", desc: "The village remains as a historical site with significant cultural value but limited active use." },
+  ];
 
   return (
     <div className="selection:bg-brand-accent selection:text-brand-bg scroll-smooth">
@@ -780,68 +711,106 @@ export default function App() {
         </motion.div>
       </section>
 
-      {/* 2. INTRO SECTION — scroll locked presentation phases */}
-      <div ref={introContainerRef} id="intro" className="relative" style={{ height: "240vh" }}>
-        <section className="sticky top-0 h-screen overflow-hidden flex items-center justify-center pt-24 pb-12 bg-[#121110]">
-          {/* Timeline center line */}
-          <div className="absolute left-1/2 top-0 h-full w-[1px] bg-[#D8B66A]/10 -translate-x-1/2" />
-          
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={introPhase}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-              className="max-w-6xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16 items-center"
-            >
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 30, filter: "blur(12px)" },
-                  visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } },
-                  exit: { opacity: 0, y: -20, filter: "blur(12px)", transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } }
-                }}
-                className="space-y-7 lg:space-y-9 relative z-20 text-[#F2EDE2]"
-              >
-                <div className="space-y-3">
-                  <span className="text-sm md:text-base uppercase tracking-[0.4em] font-bold block text-[#D8B66A]/90">
-                    {introPhaseData.eyebrow}
-                  </span>
-                  <h2 className="text-4xl md:text-6xl font-serif italic leading-[1.05] text-[#F0D28A]">
-                    {introPhaseData.title}
-                  </h2>
-                </div>
-                {introPhaseData.body}
-              </motion.div>
+      {/* 2. THE SITE */}
+      <section id="intro" className="relative bg-[#121110] pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(216,182,106,0.12),transparent_40%)] pointer-events-none" />
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16 items-center relative z-10">
+          <motion.div {...fadeIn} className="space-y-7 lg:space-y-9 text-[#F2EDE2]">
+            <div className="space-y-3">
+              <span className="text-sm md:text-base uppercase tracking-[0.4em] font-bold block text-[#D8B66A]/90">
+                The Site
+              </span>
+              <h2 className="text-4xl md:text-6xl font-serif italic leading-[1.05] text-[#F0D28A]">
+                A Coastal Settlement <br /> in Decline
+              </h2>
+            </div>
+            <p className="text-lg md:text-2xl leading-snug font-serif text-[#F2EDE2]/85">
+              Al Jumail is a coastal village in northern Qatar, established in the 18th–19th century and inhabited until the mid-20th century. It was historically supported by pearling and fishing. Today, the site is abandoned. Coral-stone buildings remain in varying states of decay, shaped by wind, salt, and time.
+            </p>
+            <p className="text-base md:text-lg leading-relaxed text-[#F2EDE2]/65 max-w-xl border-l border-[#D8B66A]/30 pl-6">
+              The site represents both physical deterioration and a weakening connection between contemporary society and pre-oil ways of life.
+            </p>
+          </motion.div>
 
+          <motion.div {...fadeIn} className="relative h-[min(52vh,520px)] flex items-center justify-center">
+            <div className="relative w-full max-w-[620px] aspect-[4/3] overflow-hidden rounded-[18px] border border-white/15 bg-white/5 shadow-[0_35px_90px_-35px_rgba(0,0,0,0.9)]">
+              <img
+                src="/images/qatar-map.png"
+                alt="Map of Qatar showing Al Jumail"
+                className="w-full h-full object-contain p-6 md:p-10"
+              />
+              <div className="absolute inset-0 shadow-[inset_0_0_50px_rgba(0,0,0,0.4)] pointer-events-none" />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* 3. HISTORY */}
+      <section id="history" className="relative bg-[#121110] text-[#F2EDE2] pt-8 pb-24 md:pb-32 overflow-hidden border-t border-white/5">
+        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.04] pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-6 relative z-10 space-y-14">
+          <motion.div {...fadeIn} className="max-w-3xl space-y-5">
+            <span className="text-sm md:text-base uppercase tracking-[0.4em] font-bold block text-[#D8B66A]/90">Historical Context</span>
+            <h2 className="text-4xl md:text-6xl font-serif italic leading-[1.05] text-[#F0D28A]">
+              From Maritime Life <br /> to Abandonment
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-start">
+            <motion.div
+              variants={staggerContainer}
+              initial="initial"
+              whileInView="whileInView"
+              viewport={{ once: true, margin: "-15%" }}
+              className="relative pl-10 md:pl-14"
+            >
+              <div className="absolute left-3 md:left-5 top-2 bottom-2 w-[1px] bg-gradient-to-b from-[#D8B66A]/20 via-[#D8B66A]/85 to-[#D8B66A]/20" />
+              <div className="space-y-10 md:space-y-12">
+                {historyTimeline.map((item, index) => (
+                  <motion.div key={item.year} variants={fadeIn} className="relative">
+                    <div className="absolute left-[-2.05rem] md:left-[-2.8rem] top-1.5 w-3 h-3 rounded-full bg-[#D8B66A] shadow-[0_0_0_6px_rgba(216,182,106,0.15)]" />
+                    <p className="text-[10px] uppercase tracking-[0.35em] text-white/25 font-bold mb-2">0{index + 1}</p>
+                    <span className="text-3xl md:text-4xl font-serif text-[#F0D28A]/75 block mb-2 italic">{item.year}</span>
+                    <h3 className="text-lg font-bold mb-3 uppercase tracking-widest text-[#F2EDE2]/90">{item.title}</h3>
+                    <p className="text-[#F2EDE2]/65 text-sm md:text-base leading-relaxed max-w-[58ch]">{item.desc}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div {...fadeIn} className="relative min-h-[500px] md:min-h-[620px]">
               <motion.div
-                variants={{
-                  hidden: { opacity: 0, scale: 0.85, x: 50, filter: "blur(20px)", rotateY: 15 },
-                  visible: { opacity: 1, scale: 1, x: 0, filter: "blur(0px)", rotateY: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 } },
-                  exit: { opacity: 0, scale: 1.05, x: 20, filter: "blur(20px)", rotateY: -10, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } }
-                }}
-                className="relative h-[min(52vh,520px)] flex items-center justify-center isolate w-full perspective-1000"
+                initial={{ opacity: 0, y: -120 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[106%] w-[86%] aspect-[4/3] rounded-[20px] overflow-hidden border border-white/10 shadow-[0_35px_90px_-40px_rgba(0,0,0,0.85)]"
               >
-                <motion.div 
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 6, ease: "easeInOut", repeat: Infinity }}
-                  className="relative w-full max-w-[620px] aspect-[4/3] overflow-hidden rounded-[18px] border border-white/15 bg-white/5 shadow-[0_35px_90px_-35px_rgba(0,0,0,0.9)]"
-                >
-                  <motion.img
-                    animate={{ scale: [1, 1.05, 1] }}
-                    transition={{ duration: 20, ease: "easeInOut", repeat: Infinity }}
-                    src={introPhaseData.image}
-                    alt={introPhaseData.imageAlt}
-                    className={`w-full h-full ${introPhaseData.imageClassName}`}
-                  />
-                  <div className="absolute inset-0 shadow-[inset_0_0_50px_rgba(0,0,0,0.4)] pointer-events-none" />
-                </motion.div>
+                <img
+                  src="/images/Aerial_View_of_Al_Jemail_Fishermen's_Village (1).jpg"
+                  alt="Aerial view of Al Jumail fishermen's village"
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 120 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.05 }}
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 translate-y-[6%] w-[86%] aspect-[4/3] rounded-[20px] overflow-hidden border border-white/10 shadow-[0_35px_90px_-40px_rgba(0,0,0,0.85)]"
+              >
+                <img
+                  src="/images/210706162824-18-al-mafjar-3624.jpg"
+                  alt="Al Jumail village ruins"
+                  className="w-full h-full object-cover"
+                />
               </motion.div>
             </motion.div>
-          </AnimatePresence>
-        </section>
-      </div>
+          </div>
+        </div>
+      </section>
 
-      {/* 3. PROBLEM SECTION — tall scroll runway pins the viewport; spiral animates across that scroll */}
+      {/* 4. PROBLEM SECTION — tall scroll runway pins the viewport; spiral animates across that scroll */}
       <div
         ref={problemContainerRef}
         id="problem"
@@ -922,27 +891,27 @@ export default function App() {
           Quest
         </motion.div>
         
-        <div className="mb-24 text-center lg:text-left relative z-10">
+        <div className="mb-24 text-center relative z-10">
             <motion.h2 variants={fadeIn} className="text-4xl md:text-[80px] font-serif italic text-brand-accent/90 leading-none tracking-tighter mb-16">Research Questions</motion.h2>
             
             <motion.div 
               variants={fadeIn} 
-              className="relative p-8 md:p-12 bg-white/40 border border-brand-accent/10 rounded-2xl backdrop-blur-xl max-w-4xl mx-auto lg:mx-0 shadow-[0_20px_60px_-15px_rgba(58,46,37,0.1)] group hover:bg-white/60 transition-colors duration-700 mb-16"
+              className="relative p-8 md:p-12 bg-white/40 border border-brand-accent/10 rounded-2xl backdrop-blur-xl max-w-4xl mx-auto shadow-[0_20px_60px_-15px_rgba(58,46,37,0.1)] group hover:bg-white/60 transition-colors duration-700 mb-16"
             >
               <div className="absolute -top-4 -left-4 md:-top-6 md:-left-6 text-brand-accent/10 font-serif text-[120px] md:text-[180px] leading-none select-none pointer-events-none group-hover:text-brand-accent/20 transition-colors duration-700">
                 "
               </div>
-              <h4 className="text-sm md:text-base uppercase tracking-[0.4em] text-brand-accent/60 mb-6 font-bold flex items-center justify-center lg:justify-start gap-4 relative z-10">
+              <h4 className="text-sm md:text-base uppercase tracking-[0.4em] text-brand-accent/60 mb-6 font-bold flex items-center justify-center gap-4 relative z-10">
                 <span className="w-8 h-[1px] bg-brand-accent/40" />
-                Central Inquiry
+                Central Question
               </h4>
-              <p className="text-2xl md:text-4xl font-serif text-brand-accent/90 leading-[1.4] italic relative z-10">
+              <p className="text-2xl md:text-4xl font-serif text-brand-accent/90 leading-[1.4] italic relative z-10 text-center">
                 How can the abandoned village of Al Jumail be revitalized into a sustainable, interactive Live Museum that preserves Qatar's heritage while meeting the social and environmental standards of the 21st century?
               </p>
             </motion.div>
         </div>
         
-        <div className="mb-12 relative z-10 text-center lg:text-left">
+        <div className="mb-12 relative z-10 text-center">
            <motion.h4 variants={fadeIn} className="text-sm md:text-base uppercase tracking-[0.4em] text-brand-accent/80 block font-bold">Core Questions</motion.h4>
         </div>
 
@@ -957,18 +926,24 @@ export default function App() {
               key={i}
               variants={fadeIn}
               whileHover={{ 
-                y: -10,
-                backgroundColor: "#3A2E25",
+                y: -12,
+                scale: 1.01,
               }}
-              className="group bg-white/40 p-10 md:p-12 aspect-[16/10] md:aspect-[16/9] rounded-xl transition-all duration-700 border border-brand-accent/5 backdrop-blur-xl relative overflow-hidden flex flex-col justify-end"
+              className={`group p-10 md:p-12 aspect-[16/10] md:aspect-[16/9] rounded-[26px] transition-all duration-700 border backdrop-blur-xl relative overflow-hidden flex flex-col justify-end shadow-[0_30px_80px_-40px_rgba(58,46,37,0.25)] ${
+                i % 2 === 0
+                  ? 'bg-white/55 border-brand-accent/10 md:-translate-y-3'
+                  : 'bg-[#f8f3ea]/80 border-brand-accent/15 md:translate-y-3'
+              }`}
             >
-              <div className="absolute top-8 left-8 text-brand-accent/20 font-serif text-3xl italic group-hover:text-white/20 transition-colors">
+              <div className="absolute top-8 left-8 text-brand-accent/20 font-serif text-3xl italic group-hover:text-brand-accent/35 transition-colors">
                 Question 0{i + 1}
               </div>
+              <div className="absolute -top-16 -right-16 w-52 h-52 rounded-full bg-[radial-gradient(circle_at_center,rgba(216,182,106,0.25),transparent_65%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              <div className="absolute bottom-0 left-0 h-1 bg-brand-accent/70 w-0 group-hover:w-full transition-all duration-700" />
               <div className="absolute top-0 right-0 p-8 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                 <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
+                 <div className="w-1.5 h-1.5 bg-brand-accent/40 rounded-full animate-pulse" />
               </div>
-              <p className="text-xl md:text-3xl font-serif text-brand-accent leading-[1.2] group-hover:text-white transition-all duration-500 max-w-[85%]">
+              <p className="text-xl md:text-3xl font-serif text-brand-accent leading-[1.2] transition-all duration-500 max-w-[85%]">
                 {question}
               </p>
             </motion.div>
@@ -977,7 +952,7 @@ export default function App() {
       </section>
 
       {/* 5. TRANSITION SECTION */}
-      <section id="transition" className="relative min-h-screen flex items-center justify-center text-center px-6 overflow-hidden">
+      <section id="transition" className="relative min-h-screen flex items-center justify-center text-center px-6 overflow-hidden py-12 md:py-16">
         {/* Parallax Background Elements */}
         <motion.div 
           style={{ 
@@ -1001,7 +976,7 @@ export default function App() {
            initial="initial"
            whileInView="whileInView"
            viewport={{ once: true, margin: "-20%" }}
-           className="relative z-10 max-w-5xl"
+           className="relative z-10 max-w-5xl mx-auto pt-10 md:pt-14"
         >
           <motion.span 
             variants={fadeIn}
@@ -1047,12 +1022,12 @@ export default function App() {
               </div>
             </div>
 
-            <motion.div variants={fadeIn} transition={{ delay: 0.8 }} className="mt-16 max-w-3xl mx-auto space-y-8">
+            <motion.div variants={fadeIn} transition={{ delay: 0.8 }} className="mt-20 max-w-3xl mx-auto space-y-8">
               <p className="text-xl md:text-2xl font-serif leading-relaxed text-brand-accent/90 text-center italic">
                 The project shifts from static preservation to controlled activation.
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left mt-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left mt-10">
                 <div className="bg-white/30 backdrop-blur-sm p-6 rounded-xl border border-brand-accent/10">
                   <h4 className="font-bold text-brand-accent tracking-widest uppercase text-xs mb-3 border-b border-brand-accent/10 pb-2">Preservation</h4>
                   <p className="text-brand-accent/70 font-serif italic">protects the existing structures</p>
@@ -1107,9 +1082,17 @@ export default function App() {
                     { title: "Interaction", desc: "Visitors engage with tools, spaces, and processes" },
                     { title: "Participation", desc: "Activities reflect real practices" },
                     { title: "Everyday Life", desc: "Focus on work, family, and social interaction" }
-                  ].map((principle) => (
-                    <div key={principle.title} className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 flex flex-col">
+                  ].map((principle, index) => (
+                    <div
+                      key={principle.title}
+                      className={`rounded-2xl border bg-white/[0.04] p-6 flex flex-col transition-all duration-500 hover:-translate-y-1 ${
+                        index === 1
+                          ? 'border-[#D8B66A]/35 shadow-[0_24px_60px_-40px_rgba(216,182,106,0.8)]'
+                          : 'border-white/10'
+                      }`}
+                    >
                       <p className="text-[10px] uppercase tracking-[0.35em] text-[#D8B66A]/55 font-bold mb-4">Principle</p>
+                      <p className="text-[10px] uppercase tracking-[0.35em] text-white/30 font-bold mb-3">0{index + 1}</p>
                       <h3 className="text-xl font-serif italic text-white mb-3">{principle.title}</h3>
                       <p className="text-sm leading-relaxed text-white/60">{principle.desc}</p>
                     </div>
@@ -1450,6 +1433,8 @@ export default function App() {
       {/* 8. EXTENDED EXPERIENCE */}
       <section id="experience" className="bg-brand-secondary py-[160px] relative overflow-hidden">
         <div className="absolute left-0 bottom-0 w-full h-1/2 bg-gradient-to-t from-brand-accent/5 to-transparent pointer-events-none" />
+        <div className="absolute -left-24 top-12 w-80 h-80 rounded-full border border-brand-accent/10 pointer-events-none" />
+        <div className="absolute -right-32 bottom-0 w-[420px] h-[420px] rounded-full border border-brand-accent/10 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
           <motion.div {...fadeIn} className="max-w-3xl mx-auto mb-24 text-brand-accent">
             <span className="text-sm md:text-base uppercase tracking-[0.4em] text-brand-accent/80 mb-8 block font-bold">Holistic Vision</span>
@@ -1458,7 +1443,7 @@ export default function App() {
             </h2>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
             {[
               { t: "Culinary Experiences", d: "Rooted in local agriculture, the food program brings ancient flavors to the modern palate." },
               { t: "Sustainable Farming", d: "Integrated agricultural systems treat land restoration as a primary duty." },
@@ -1468,11 +1453,16 @@ export default function App() {
                 key={i}
                 {...fadeIn}
                 transition={{ ...fadeIn.transition, delay: i * 0.1 }}
-                className="group p-10 bg-white rounded-[24px] shadow-sm hover:shadow-2xl transition-all duration-700 flex flex-col items-center"
+                className={`group p-10 rounded-[28px] border transition-all duration-700 flex flex-col items-center text-left md:text-center ${
+                  i === 1
+                    ? 'bg-brand-accent text-[#F2EDE2] border-brand-accent shadow-[0_35px_80px_-40px_rgba(58,46,37,0.6)] md:-translate-y-5'
+                    : 'bg-white border-brand-accent/10 text-brand-accent shadow-[0_25px_70px_-45px_rgba(58,46,37,0.35)]'
+                }`}
               >
-                <div className="w-24 h-[1px] bg-brand-accent/10 mb-8 group-hover:w-full transition-all duration-700" />
-                <h4 className="text-2xl font-bold mb-6 text-brand-accent tracking-tight leading-tight">{exp.t}</h4>
-                <p className="opacity-60 text-base leading-relaxed text-brand-accent/70">{exp.d}</p>
+                <p className={`text-[10px] uppercase tracking-[0.4em] font-bold mb-6 ${i === 1 ? 'text-[#F0D28A]/90' : 'text-brand-accent/40'}`}>0{i + 1}</p>
+                <div className={`w-24 h-[1px] mb-8 group-hover:w-full transition-all duration-700 ${i === 1 ? 'bg-[#F0D28A]/50' : 'bg-brand-accent/10'}`} />
+                <h4 className={`text-2xl font-bold mb-6 tracking-tight leading-tight ${i === 1 ? 'text-white' : 'text-brand-accent'}`}>{exp.t}</h4>
+                <p className={`text-base leading-relaxed ${i === 1 ? 'text-white/75' : 'text-brand-accent/70'}`}>{exp.d}</p>
               </motion.div>
             ))}
           </div>
@@ -1668,12 +1658,15 @@ export default function App() {
                 { title: "Existing site condition", text: "The village is already accessible and partially documented, allowing work to begin with minimal setup" },
                 { title: "Scalable implementation", text: "Phases allow gradual development based on funding, testing, and feedback" },
                 { title: "Operational viability", text: "Revenue from visitors, guided tours, and food services can support maintenance and staffing" }
-              ].map((item) => (
+              ].map((item, index) => (
                 <motion.div
                   key={item.title}
                   {...fadeIn}
-                  className="rounded-[24px] border border-brand-accent/15 bg-white p-7 shadow-[0_20px_60px_-35px_rgba(58,46,37,0.35)] flex flex-col"
+                  className={`rounded-[24px] border border-brand-accent/15 p-7 shadow-[0_20px_60px_-35px_rgba(58,46,37,0.35)] flex flex-col transition-all duration-500 hover:-translate-y-1 ${
+                    index % 2 === 0 ? 'bg-white' : 'bg-[#fbf8f2]'
+                  }`}
                 >
+                  <p className="text-[10px] uppercase tracking-[0.35em] text-brand-accent/35 font-bold mb-4">0{index + 1}</p>
                   <h4 className="text-xl font-bold tracking-tight text-brand-accent mb-3">{item.title}</h4>
                   <p className="text-sm leading-relaxed text-brand-accent/75">{item.text}</p>
                 </motion.div>
@@ -1750,12 +1743,17 @@ export default function App() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-              {STAKEHOLDERS.map((stakeholder) => (
+              {STAKEHOLDERS.map((stakeholder, index) => (
                 <motion.div
                   key={stakeholder.group}
                   variants={fadeIn}
-                  className="rounded-[28px] border border-white/10 bg-white/[0.04] p-8 md:p-10 min-h-[300px] flex flex-col"
+                  className={`rounded-[28px] border p-8 md:p-10 min-h-[300px] flex flex-col transition-all duration-500 hover:-translate-y-1 ${
+                    index % 2 === 0
+                      ? 'border-white/10 bg-white/[0.04]'
+                      : 'border-[#D8B66A]/20 bg-[linear-gradient(160deg,rgba(255,255,255,0.07),rgba(255,255,255,0.03))]'
+                  } ${index % 3 === 1 ? 'xl:-translate-y-3' : ''}`}
                 >
+                  <p className="text-[10px] uppercase tracking-[0.35em] text-white/25 font-bold mb-4">0{index + 1}</p>
                   <p className="text-[10px] uppercase tracking-[0.35em] text-[#D8B66A]/55 font-bold mb-6">{stakeholder.role}</p>
                   <h3 className="text-3xl font-serif italic text-[#F0D28A] mb-6">{stakeholder.group}</h3>
                   <p className="text-sm md:text-base leading-relaxed text-white/60">{stakeholder.detail}</p>
@@ -1816,6 +1814,8 @@ export default function App() {
         >
           <div className="rounded-[36px] bg-[#121110] border border-white/10 text-[#F2EDE2] p-10 md:p-14 lg:p-16 overflow-hidden relative text-center shadow-2xl">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(216,182,106,0.08),transparent_50%)] pointer-events-none" />
+            <div className="absolute left-0 top-10 bottom-10 w-[2px] bg-gradient-to-b from-transparent via-[#D8B66A]/55 to-transparent" />
+            <div className="absolute right-0 top-10 bottom-10 w-[2px] bg-gradient-to-b from-transparent via-[#D8B66A]/55 to-transparent" />
             <motion.div variants={fadeIn} className="relative z-10 max-w-4xl mx-auto space-y-8">
               <span className="text-sm md:text-base uppercase tracking-[0.4em] text-[#D8B66A]/90 font-bold block">Conclusion</span>
               <h3 className="text-4xl md:text-5xl lg:text-6xl font-serif italic leading-tight text-[#F0D28A]">
