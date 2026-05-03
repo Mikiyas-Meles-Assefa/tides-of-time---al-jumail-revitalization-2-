@@ -590,10 +590,21 @@ export default function App() {
   };
 
   const historyTimeline = [
-    { year: "18th–19th Century", title: "Settlement", desc: "Al Jumail develops as a small coastal community dependent on pearling and fishing." },
-    { year: "Early 20th Century", title: "Economic Shift", desc: "The decline of natural pearl markets affects coastal settlements across the Gulf." },
-    { year: "Mid 20th Century", title: "Migration", desc: "Population shifts toward urban centers following the rise of the oil economy." },
-    { year: "Present", title: "Abandonment", desc: "The village remains as a historical site with significant cultural value but limited active use." },
+    {
+      year: "18th-19th Century",
+      title: "Settlement",
+      desc: "Al Jumail developed as a small coastal community dependent on pearling and fishing. It was inhabited by local tribes such as Al Kubaisi and Al Muhannadi, organized around extended family groups with traditional courtyard houses and a central mosque reflecting Islamic and social customs. The village was later abandoned in the mid-20th century as residents moved to cities like Doha during the country's oil-driven development."
+    },
+    {
+      year: "Early 20th Century",
+      title: "Economic Shift",
+      desc: "The decline of the natural pearl industry, driven by cultured pearls and changing markets, hit Gulf coastal settlements hard. Communities like Al Jumail lost their main source of income, leading to economic decline and migration."
+    },
+    {
+      year: "Mid 20th Century",
+      title: "Migration",
+      desc: "After the discovery of oil, many residents left traditional villages like Al Jumail and moved to growing urban centers such as Doha, leading to the gradual abandonment of coastal settlements."
+    }
   ];
 
   return (
@@ -995,7 +1006,7 @@ export default function App() {
                   transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
                   className="text-5xl md:text-[120px] font-serif tracking-tighter leading-[1.1] italic text-brand-accent/90"
                 >
-                  From preservation
+                  From history held
                 </motion.h2>
               </div>
               
@@ -1016,29 +1027,29 @@ export default function App() {
                        transition={{ duration: 1.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
                        className="absolute inset-0 bg-brand-accent origin-left"
                      />
-                     <span className="relative z-10 text-white text-5xl md:text-[100px] leading-none">use.</span>
+                     <span className="relative z-10 text-white text-5xl md:text-[100px] leading-none">history shared.</span>
                   </span>
                 </motion.div>
               </div>
             </div>
 
-            <motion.div variants={fadeIn} transition={{ delay: 0.8 }} className="mt-20 max-w-3xl mx-auto space-y-8">
+            <motion.div variants={fadeIn} transition={{ delay: 0.8 }} className="mt-20 max-w-6xl mx-auto space-y-8">
               <p className="text-xl md:text-2xl font-serif leading-relaxed text-brand-accent/90 text-center italic">
                 The project shifts from static preservation to controlled activation.
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left mt-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left mt-10">
                 <div className="bg-white/30 backdrop-blur-sm p-6 rounded-xl border border-brand-accent/10">
                   <h4 className="font-bold text-brand-accent tracking-widest uppercase text-xs mb-3 border-b border-brand-accent/10 pb-2">Preservation</h4>
-                  <p className="text-brand-accent/70 font-serif italic">protects the existing structures</p>
+                  <p className="text-brand-accent/70 font-serif italic">Minimal intervention is a must. Structures are stabilized using traditional Gulf construction methods, such as repairing coral-stone and beach-rock walls with lime-based plaster, reinforcing collapsed sections with palm trunk elements, and replacing eroded mud mortar with locally compatible earth lime mixes. Damaged masonry is carefully reassembled using original stones wherever possible to maintain authenticity.</p>
                 </div>
                 <div className="bg-white/30 backdrop-blur-sm p-6 rounded-xl border border-brand-accent/10">
                   <h4 className="font-bold text-brand-accent tracking-widest uppercase text-xs mb-3 border-b border-brand-accent/10 pb-2">Adaptation</h4>
-                  <p className="text-brand-accent/70 font-serif italic">introduces low-impact uses</p>
+                  <p className="text-brand-accent/70 font-serif italic">Select spaces are gently reused with reversible, low-impact insertions such as palm-frond shading structures, timber walkways over fragile ground, and lightweight steel or wood frames that do not touch or damage historic walls. These adaptations create shaded gathering points, small interpretation zones, and guided circulation paths.</p>
                 </div>
                 <div className="bg-white/30 backdrop-blur-sm p-6 rounded-xl border border-brand-accent/10">
                   <h4 className="font-bold text-brand-accent tracking-widest uppercase text-xs mb-3 border-b border-brand-accent/10 pb-2">Participation</h4>
-                  <p className="text-brand-accent/70 font-serif italic">allows visitors to experience daily life practices</p>
+                  <p className="text-brand-accent/70 font-serif italic">Visitors engage through hands-on cultural experiences like traditional fishing net demonstrations, pearl diving storytelling routes, and reconstructed domestic scenes showing cooking with wood fires and date-based food preparation to reflect daily life in Al Jumail.</p>
                 </div>
               </div>
             </motion.div>
@@ -1445,9 +1456,18 @@ export default function App() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
             {[
-              { t: "Culinary Experiences", d: "Rooted in local agriculture, the food program brings ancient flavors to the modern palate." },
-              { t: "Sustainable Farming", d: "Integrated agricultural systems treat land restoration as a primary duty." },
-              { t: "Strategic Partnerships", d: "Partnerships foster community involvement and global heritage awareness." }
+              {
+                t: "Culinary",
+                d: "The program features traditional Qatari dishes such as Machboos (spiced rice with meat or fish), Luqaimat (sweet fried dumplings with date syrup), and grilled or dried seafood. These foods reflect everyday diets based on fishing, dates, and simple desert ingredients, prepared in a way that stays close to original cooking methods."
+              },
+              {
+                t: "Sustainability",
+                d: "Integrated systems focus on land restoration using methods like hydroponic farming and controlled-environment agriculture. These are mainly applied in the Agriculture Experience House for education and demonstration. The project also partners with Agrico and local organic farms in areas like Al Khor (Torba Farm) and Al Rayyan for use within the program."
+              },
+              {
+                t: "Strategic Partnerships",
+                d: "Partnerships support community involvement and global heritage awareness by connecting the project with local institutions, farms, and cultural organizations. These collaborations help develop educational programs, manage site activities, and share knowledge about traditional practices and sustainable development."
+              }
             ].map((exp, i) => (
               <motion.div 
                 key={i}
