@@ -415,6 +415,33 @@ const IMPACT_LIMITATIONS = [
   }
 ];
 
+const MITIGATION_STRATEGIES = [
+  {
+    title: "Minimal-Intervention Restoration",
+    detail: "Repair only what is necessary without changing the original character of buildings. Damaged areas are treated with traditional materials like lime plaster and coral stone to preserve authenticity and avoid over-modernization."
+  },
+  {
+    title: "Visitor Management System",
+    detail: "Use guided paths, raised walkways, and controlled circulation so visitors can experience the site without damaging walls, floors, or archaeological remains. Group sizes are limited to reduce pressure on fragile spaces."
+  },
+  {
+    title: "Restricted Vehicle Access",
+    detail: "Keep cars away from the heritage core to reduce vibration, dust, and erosion. Visitors park at site edges and use small electric buggies or shuttles to reach the village."
+  },
+  {
+    title: "Zoning of Back-of-House Functions",
+    detail: "Place staff housing, storage, and maintenance zones outside the historic village so operational needs do not disrupt heritage character. Service spaces remain low-profile and discreet."
+  },
+  {
+    title: "Environmental Protection Measures",
+    detail: "Address ongoing salt, wind, and humidity exposure through breathable protective coatings, wind barriers in exposed zones, and regular preventive upkeep that does not damage original materials."
+  },
+  {
+    title: "Monitoring and Maintenance Program",
+    detail: "Run continuous checks using site surveys and simple sensors for humidity, salt accumulation, and structural movement. Early detection allows timely intervention before damage becomes critical."
+  }
+];
+
 const MULTIMEDIA_METHOD = [
   {
     mode: "Before / After Slider",
@@ -431,6 +458,41 @@ const MULTIMEDIA_METHOD = [
   {
     mode: "Suggested Audio Layer",
     purpose: "Sea, wind, footsteps, market activity, and oral-history narration could make the multimedia output equivalent to a guided heritage experience."
+  }
+];
+
+const CAFE_OPERATIONS_POLICY = [
+  {
+    title: "No Single-Use Plastics",
+    detail: "Plastic cups, bottles, straws, and packaging are not permitted. Only reusable, biodegradable, or compostable materials may be used."
+  },
+  {
+    title: "Dine-In Priority",
+    detail: "Service is primarily dine-in to minimize packaging waste. Limited takeaway is allowed only with approved eco-friendly containers."
+  },
+  {
+    title: "Local and Organic Sourcing",
+    detail: "At least 60% of ingredients must be sourced from the Al Shamal region or the site's hydroponic houses, and the rest from local suppliers."
+  },
+  {
+    title: "Waste Management",
+    detail: "Mandatory waste sorting (organic, recyclable, non-recyclable). Food waste should be composted or redirected where possible."
+  },
+  {
+    title: "Water Efficiency",
+    detail: "Use water-saving fixtures and avoid unnecessary consumption. Greywater reuse is encouraged where feasible."
+  },
+  {
+    title: "Energy Use",
+    detail: "Low-energy equipment and natural ventilation or shading strategies should be prioritized over high-consumption systems."
+  },
+  {
+    title: "Material Use",
+    detail: "Furniture and fit-outs must use sustainable, locally sourced, or recycled materials, avoiding harmful chemicals or finishes."
+  },
+  {
+    title: "Cultural Alignment",
+    detail: "Menus and operations should reflect local food traditions and respect the historical context of the site. Menus are displayed on wooden boards or accessed via QR codes, with receipts sent digitally."
   }
 ];
 
@@ -1736,8 +1798,84 @@ export default function App() {
                 </motion.div>
               ))}
             </div>
+
+            <motion.div variants={fadeIn} className="pt-4">
+              <div className="rounded-[32px] bg-[#121110] border border-white/10 p-10 md:p-12 shadow-[0_35px_90px_-35px_rgba(0,0,0,0.7)]">
+                <div className="max-w-3xl mb-10">
+                  <p className="text-[10px] uppercase tracking-[0.35em] text-[#D8B66A]/70 font-bold mb-5">
+                    Response to Project Constraints
+                  </p>
+                  <h4 className="text-4xl md:text-5xl font-serif italic leading-tight text-[#F0D28A] mb-6">
+                    Mitigation Strategies
+                  </h4>
+                  <p className="text-base md:text-lg leading-relaxed text-white/65">
+                    The following strategies are built into the project to reduce risks identified in the limitations framework and support long-term conservation.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                  {MITIGATION_STRATEGIES.map((item, index) => (
+                    <motion.div
+                      key={item.title}
+                      variants={fadeIn}
+                      className="rounded-[24px] border border-white/10 bg-white/[0.04] p-7 md:p-8 transition-all duration-500 hover:-translate-y-1 hover:bg-white/[0.07]"
+                    >
+                      <p className="text-[10px] uppercase tracking-[0.35em] text-[#D8B66A]/45 font-bold mb-4">0{index + 1}</p>
+                      <h5 className="text-2xl font-serif italic text-white mb-4">{item.title}</h5>
+                      <p className="text-sm leading-relaxed text-white/70">{item.detail}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
 
+        </div>
+      </section>
+
+      {/* 10. CAFE OPERATIONS POLICY */}
+      <section id="cafe-policy" className="relative bg-[#F2EDE2] text-brand-accent py-[160px] overflow-hidden border-t border-brand-accent/10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(216,182,106,0.15),transparent_35%),radial-gradient(circle_at_85%_75%,rgba(58,46,37,0.08),transparent_30%)] pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-6 relative z-10 space-y-14">
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "-15%" }}
+            className="max-w-4xl space-y-6"
+          >
+            <motion.span variants={fadeIn} className="text-sm md:text-base uppercase tracking-[0.4em] text-brand-accent/80 font-bold block">
+              Operational Framework
+            </motion.span>
+            <motion.h2 variants={fadeIn} className="text-4xl md:text-6xl font-serif italic leading-tight text-brand-accent">
+              Cafe Operations Policy
+            </motion.h2>
+            <motion.p variants={fadeIn} className="text-lg md:text-xl leading-relaxed text-brand-accent/75 font-serif italic">
+              This policy guides food-service operations to align environmental responsibility, local sourcing, and cultural authenticity within the Al Jumail heritage setting.
+            </motion.p>
+          </motion.div>
+
+          <motion.div
+            variants={staggerContainer}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, margin: "-15%" }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
+          >
+            {CAFE_OPERATIONS_POLICY.map((item, index) => (
+              <motion.div
+                key={item.title}
+                variants={fadeIn}
+                className="rounded-[28px] border border-brand-accent/15 bg-white p-8 md:p-9 shadow-[0_25px_70px_-40px_rgba(58,46,37,0.25)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_35px_90px_-30px_rgba(58,46,37,0.3)]"
+              >
+                <p className="text-[10px] uppercase tracking-[0.35em] text-brand-accent/35 font-bold mb-4">
+                  0{index + 1}
+                </p>
+                <h3 className="text-2xl font-serif italic text-brand-accent mb-4">{item.title}</h3>
+                <p className="text-sm md:text-base leading-relaxed text-brand-accent/75">{item.detail}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
